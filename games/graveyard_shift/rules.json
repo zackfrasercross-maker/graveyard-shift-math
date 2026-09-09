@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "winning_geometry": "1024-ways-left-to-right",
+  "minimum_reels": 3,
+  "wild": "substitutes-regular-symbols-on-reels-2-through-5",
+  "scatter": "no-cash-pay-count-highest-visible-per-spin-after-cascades",
+  "paytable_units": "hundredths-of-base-bet-per-way",
+  "paytable": {
+    "thermos": [10, 20, 40],
+    "shovel": [10, 20, 50],
+    "keys": [10, 30, 60],
+    "raven": [20, 40, 80],
+    "lantern": [20, 50, 100],
+    "checklist": [20, 60, 120],
+    "sleepyGhost": [30, 80, 160],
+    "blackCat": [40, 100, 200],
+    "tombstone": [60, 150, 300],
+    "caretakerSymbol": [100, 250, 500]
+  },
+  "base_symbol_weights": [20, 18, 16, 14, 12, 10, 8, 6, 4, 3, 3, 2],
+  "ante_scatter_weight_factor": 3,
+  "paid_tower": {"base": "base", "ante": "base", "boosted": "boosted"},
+  "features": {
+    "bonus": {"spins": 10, "ladder": "base", "carry_tier": false},
+    "super": {"spins": 12, "ladder": "base", "carry_tier": true},
+    "hidden": {"spins": 12, "ladder": "boosted", "carry_tier": true}
+  },
+  "paid_scatter_triggers": {"3": "bonus", "4": "super", "5": "hidden"},
+  "retrigger": {"minimum_scatters": 3, "extra_spins": 3, "maximum_awards_per_feature": 5},
+  "tower_step": "award-at-current-tier-then-advance-once-before-refill",
+  "tower_top": "hold-top-tier-until-normal-reset",
+  "cap": "shared-25000x-base-bet-for-entire-purchased-round-including-features",
+  "safety_max_cascades": 100,
+  "status": "working-model-for-simulation-and-tuning"
+}
