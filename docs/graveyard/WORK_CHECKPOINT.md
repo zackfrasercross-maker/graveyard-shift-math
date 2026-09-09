@@ -11,12 +11,20 @@ Branch: `codex/graveyard-math-foundation`. Start here after a reset.
 - No Graveyard paytable, winning geometry, free-spin or retrigger rules have been confirmed. Earlier Buzzin' Riches rules are a different game and must not silently be imported.
 - No retrieved evidence establishes previous Stake approval of Graveyard math. No game generator or publish files exist yet.
 
-## Current work
+## Saved milestones
 
-1. Save this contract and source audit as a small remote checkpoint.
-2. Implement exact weighted RTP/risk analysis, comparing current published guidance with the pinned SDK.
-3. Add analytical Max Win or Zero feasibility (not fabricated reel outcomes), tests, and a saved report.
-4. Resolve gameplay rules before generating, optimizing and validating actual event books.
+- Remote checkpoint `ad4d092b203fb04a6c4ec0b8fcdce9173750d9c3`: frontend contract and source audit.
+- Exact auditor and regression fixtures added. `python -m games.graveyard_shift.checkpoint` reproduces the next checkpoint report.
+- Max Win or Zero: exact analytical hit probability 481/12500 at 96.2% RTP; current-profile risk classes exceeded are tail probability and tail liability. This is not a critical rejection or an approval result.
+- The other six modes are unmeasured. No generated game outcomes exist.
+
+## Next work
+
+1. Resolve winning geometry and the bonus rules. These were left null in the approved frontend.
+2. Implement genuine complete-round events using those rules, with independent payout replay.
+3. Generate reproducible simulations in resumable batches, checkpointing seeds, IDs, rules hash and completed batches.
+4. Optimize final integer selection weights against all modes' 96.2% targets, then evaluate diversity, full event integrity and current risk profiles.
+5. Validate frontend playback against exported authoritative events before considering a Stake submission.
 
 ## Persistence
 

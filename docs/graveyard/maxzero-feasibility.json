@@ -1,0 +1,111 @@
+{
+  "metrics": {
+    "mode": "maxzero",
+    "cost_base_bet": 1000.0,
+    "rtp": 0.962,
+    "expected_payout_base_bet": 962.0,
+    "variance_base_bet": 23124556.0,
+    "std_base_bet": 4808.799850274494,
+    "std_per_mode_cost": 4.808799850274494,
+    "nonzero_probability": 0.03848,
+    "prob5k_raw": 0.03848,
+    "prob10k_raw": 0.03848,
+    "cvar_absolute": 25000.0,
+    "cvar_per_mode_cost": 25.0,
+    "etl40_cost_normalized": 0.0,
+    "etl10k_cost_normalized": 0.962,
+    "etl_sum": 0.962,
+    "max_supported_payout_base_bet": 25000.0,
+    "max_win_probability": 0.03848,
+    "rows": 2,
+    "positive_weight_rows": 2,
+    "positive_weight_paying_rows": 1,
+    "maximum_single_row_probability": 0.96152,
+    "effective_row_count": 1.079911949957993,
+    "total_weight": 12500
+  },
+  "checks": {
+    "critical_distribution_failures": [],
+    "target_rtp_matches": true,
+    "three_star_risk_classes": {
+      "tail_probability": {
+        "prob10k_raw": {
+          "value": 0.03848,
+          "limit": 0.01
+        }
+      },
+      "tail_liability": {
+        "etl10k_cost_normalized": {
+          "value": 0.962,
+          "limit": 0.8
+        }
+      }
+    },
+    "unverified": [
+      "gameplay_rules",
+      "book_event_integrity",
+      "simulation_diversity",
+      "book_size_and_event_count",
+      "viable_bet_template",
+      "frontend_playback",
+      "Stake_review"
+    ]
+  },
+  "publish_ready": false,
+  "kind": "analytical_two_outcome_feasibility_NOT_publish_files",
+  "frontend_commit": "8362f2fd1dcc6e90b7fd7c58e507de5cb61e48f9",
+  "profile_checked": "2026-09-09",
+  "profile_source": "https://stake-engine.com/docs/approval-guidelines/math-verification",
+  "exact_hit_probability": "481/12500",
+  "exact_rtp": "481/500",
+  "mean_bets_per_hit": 25.987525987525988,
+  "all_mode_target_mean_payouts_base_bet": {
+    "base": 0.962,
+    "ante": 2.886,
+    "boosted": 9.62,
+    "bonus": 96.2,
+    "super": 288.6,
+    "hidden": 481.0,
+    "maxzero": 962.0
+  },
+  "rules_pending": [
+    "winning_geometry",
+    "paytable",
+    "wild_rules",
+    "scatter_trigger_rules",
+    "ante_enhancement",
+    "bonus_spin_counts",
+    "bonus_mode_differences",
+    "retrigger_rules",
+    "multiplier_progression_and_reset",
+    "cascade_cap_handling"
+  ],
+  "other_six_modes_measured": false,
+  "note": "Two payout values do not provide a production population of visually varied valid event books. No RNG or paytable is inferred from frontend QA fixtures.",
+  "pinned_sdk_comparison": {
+    "fork_base_commit": "e37dd1f5993db231f72070a0f0bf991ff4f5767a",
+    "upstream_checked_commit": "307e6812b38489e212f835001f21e9f7d4c18a4d",
+    "metrics": {
+      "prob5k": 0.007696000000000001,
+      "prob10k": 0.007696000000000001,
+      "etl10k": 962.0,
+      "etl40b": 0,
+      "cvar": 25.0,
+      "rtp": 0.962
+    },
+    "violations": {
+      "prob10k": 0.007696000000000001,
+      "etl10k": 962.0
+    },
+    "source_sha256": {
+      "utils/rgs_verification.py": "bc2ce5fdda73f07f53d298322b0e9f97a67425d6ad30c96a6ee24403dd2406ba",
+      "utils/analysis/distribution_functions.py": "7f9aee4989d35c0e687b4c42f9d1a226300cbcda20560e93be61f7c7b49ff0db"
+    },
+    "note": "SDK files were not changed. Live documentation and SDK use different risk calculations; these are separate reports."
+  },
+  "regression_tests": {
+    "run": 19,
+    "failures": 0,
+    "errors": 0
+  }
+}
