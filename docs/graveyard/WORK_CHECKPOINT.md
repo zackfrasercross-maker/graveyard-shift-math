@@ -1,5 +1,20 @@
 # Graveyard math checkpoint
 
+## Final 10-million-round validation — active 2026-09-09
+
+- User requested the final Stake math upload ZIP only after full readiness and 10,000,000 final test spins.
+- The interrupted export completed successfully: all seven final modes, including Hidden Bonus, were independently replayed. All 51 export checksums were rechecked and match. See verification.json in this directory.
+- Final test scope: 10,000,000 complete weighted round selections PER MODE, 70,000,000 total. These draw from 100,000 independently verified event books per mode, not 70 million newly generated unique outcomes.
+- final_trials.py uses exact uint64 ticket intervals, PCG64DXSM, fixed seed 2026090902 and one-million-round atomic checkpoints. Theoretical RTP stays exact 481/500; finite observed RTP is tested against predeclared statistical diagnostics and is not forced to equal it.
+- 39 audit/engine/pipeline/final-trial tests pass. The final trial run is next; no 10-million-round completion is claimed yet.
+- Current local source worktree: /workspace/scratch/b527f7704526/graveyard-math-final, based on the latest remote checkpoint 1ee2eae4039ade55123a048206ff7d75d681c40a.
+- Candidate data and final weighted export remain at the paths in the earlier checkpoint. Run final_trials with the final export directory and candidate directory, plus --output /workspace/scratch/b527f7704526/graveyard-final-trials.
+- After all modes pass, save reports and construct an upload archive with the exact index.json, seven books and seven lookups. Keep validation/hand-off documents separately identifiable. Preserve the current binary-mode risk flags and SDK warnings; do not claim Stake approval or completed frontend integration.
+
+## Previous recovery record
+
+# Graveyard math checkpoint
+
 ## Latest saved state — resume here
 
 Updated 2026-09-09 after the execution environment disconnected.

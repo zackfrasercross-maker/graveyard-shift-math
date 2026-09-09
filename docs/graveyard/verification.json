@@ -1,0 +1,817 @@
+{
+  "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+  "exact_cross_mode_rtp_spread": "0",
+  "modes": {
+    "base": {
+      "metrics": {
+        "mode": "base",
+        "cost_base_bet": 1.0,
+        "rtp": 0.962,
+        "expected_payout_base_bet": 0.962,
+        "variance_base_bet": 1224.9999999540657,
+        "std_base_bet": 34.9999999993438,
+        "std_per_mode_cost": 34.9999999993438,
+        "nonzero_probability": 0.300000000015576,
+        "prob5k_raw": 1.0001979166e-06,
+        "prob10k_raw": 1.0001e-06,
+        "cvar_absolute": 508.92740373324295,
+        "cvar_per_mode_cost": 508.92740373324295,
+        "etl40_cost_normalized": 0.5310042623018904,
+        "etl10k_cost_normalized": 0.02500179128444788,
+        "etl_sum": 0.5560060535863381,
+        "max_supported_payout_base_bet": 25000.0,
+        "max_win_probability": 1e-06,
+        "rows": 100000,
+        "positive_weight_rows": 100000,
+        "positive_weight_paying_rows": 51074,
+        "maximum_single_row_probability": 0.003149997343722,
+        "effective_row_count": 42537.752917319405,
+        "total_weight": 10000000000000000
+      },
+      "checks": {
+        "critical_distribution_failures": [],
+        "target_rtp_matches": true,
+        "three_star_risk_classes": {},
+        "unverified": [
+          "frontend_authoritative_playback",
+          "ACP_statistics_parity",
+          "viable_bet_template",
+          "Stake_quality_review"
+        ]
+      },
+      "publish_ready": false,
+      "exact_rtp": "481/500",
+      "identity": {
+        "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+        "validator_sha256": "47243f7b649bc51c769ee50a2c1b2f1ead6d9b5c72d2ae1654fd81fc00353727",
+        "audit_sha256": "298e483770d61a6fa3f969f2eed88042073b087ed1a7fea01ff1347407e8d1ec",
+        "lookup_sha256": "ee1f65a9a6739273d653a70f203c8fcf3ac458e6de0bbf275e9a1acb2b01fe3e"
+      },
+      "integrity": {
+        "replayed_rounds": 100000,
+        "events": 1611389,
+        "compressed_bytes": 19466864,
+        "unique_event_sequences_excluding_cosmetic_variant": 100000,
+        "unique_first_boards": 99994,
+        "event_types": {
+          "roundStart": 100000,
+          "tower": 487719,
+          "reveal": 214907,
+          "spinEnd": 214802,
+          "roundEnd": 100000,
+          "win": 172917,
+          "cascade": 172812,
+          "featureTrigger": 10744,
+          "featureStart": 10744,
+          "freeSpin": 114907,
+          "featureEnd": 10744,
+          "retrigger": 988,
+          "cap": 105
+        },
+        "tower_states_observed": {
+          "base:0:1": 289116,
+          "base:1:2": 95568,
+          "base:2:3": 39087,
+          "base:3:5": 16304,
+          "base:4:10": 34246,
+          "boosted:0:2": 1012,
+          "boosted:1:3": 1231,
+          "boosted:2:5": 1182,
+          "boosted:3:10": 1204,
+          "boosted:4:25": 8769
+        },
+        "fixtures": {
+          "zero": "base-zero.json",
+          "tower_top": "base-tower_top.json",
+          "retrigger": "base-retrigger.json",
+          "max_win": "base-max_win.json"
+        },
+        "book_lookup_candidate_match": true,
+        "size_and_event_limits_pass": true,
+        "diversity_note": "Counts measure diversity; they are not a platform quality approval."
+      },
+      "play_statistics": {
+        "probability_profit_over_mode_cost": 0.090291284854661,
+        "probability_break_even": 0.0124956360279457,
+        "probability_return_below_mode_cost": 0.8972130791173933,
+        "weighted_feature_probability": 0.0044999999999999,
+        "weighted_spins_per_round": 1.0465568921867774,
+        "unique_payout_values": 2410
+      },
+      "pinned_sdk_comparison": {
+        "metrics": {
+          "prob5k": 1.0001979165999973e-06,
+          "prob10k": 1.0000999999999972e-06,
+          "etl10k": 0.02500179128444788,
+          "etl40b": 0.5340614193952227,
+          "cvar": 508.50678238539115,
+          "rtp": 0.962
+        },
+        "violations": {},
+        "note": "Unmodified pinned SDK uses different thresholds, inclusive boundaries and ETL normalization. These warnings remain visible separately."
+      },
+      "files_sha256": {
+        "books_base.jsonl.zst": "e053ba4c6d6be1d84452c7d99dc4b9c33dbe52ca65d3bfc1d56733336ccfee6a",
+        "lookUpTable_base_0.csv": "ee1f65a9a6739273d653a70f203c8fcf3ac458e6de0bbf275e9a1acb2b01fe3e",
+        "fixtures/base-zero.json": "1bd461b7a0dbef3342d94d0d971070fbc33b839cec50e3acea6f0ce577ad9317",
+        "fixtures/base-tower_top.json": "adfd791f474998eb005c62fb1fed7f58c44707b19237269e5ea9c69b1e7394f3",
+        "fixtures/base-retrigger.json": "adfd791f474998eb005c62fb1fed7f58c44707b19237269e5ea9c69b1e7394f3",
+        "fixtures/base-max_win.json": "2b865249f01c696655f062bf4640e1818bc1d4f19f8617c562858d51e82a5bee"
+      }
+    },
+    "ante": {
+      "metrics": {
+        "mode": "ante",
+        "cost_base_bet": 3.0,
+        "rtp": 0.962,
+        "expected_payout_base_bet": 2.886,
+        "variance_base_bet": 5624.999999961875,
+        "std_base_bet": 74.99999999974584,
+        "std_per_mode_cost": 24.99999999991528,
+        "nonzero_probability": 0.3800000000122434,
+        "prob5k_raw": 7.07374535388e-05,
+        "prob10k_raw": 3.5415148986e-06,
+        "cvar_absolute": 1111.278473134892,
+        "cvar_per_mode_cost": 370.4261577116307,
+        "etl40_cost_normalized": 0.4183234597198353,
+        "etl10k_cost_normalized": 0.022886263025471733,
+        "etl_sum": 0.441209722745307,
+        "max_supported_payout_base_bet": 25000.0,
+        "max_win_probability": 1e-06,
+        "rows": 100000,
+        "positive_weight_rows": 100000,
+        "positive_weight_paying_rows": 51589,
+        "maximum_single_row_probability": 0.0027904093274706,
+        "effective_row_count": 28123.73171164439,
+        "total_weight": 10000000000000000
+      },
+      "checks": {
+        "critical_distribution_failures": [],
+        "target_rtp_matches": true,
+        "three_star_risk_classes": {},
+        "unverified": [
+          "frontend_authoritative_playback",
+          "ACP_statistics_parity",
+          "viable_bet_template",
+          "Stake_quality_review"
+        ]
+      },
+      "publish_ready": false,
+      "exact_rtp": "481/500",
+      "identity": {
+        "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+        "validator_sha256": "47243f7b649bc51c769ee50a2c1b2f1ead6d9b5c72d2ae1654fd81fc00353727",
+        "audit_sha256": "298e483770d61a6fa3f969f2eed88042073b087ed1a7fea01ff1347407e8d1ec",
+        "lookup_sha256": "9deb2b0192209cabfc5b565b15498881f66f8ac22c1c0a68d202d3c94152e947"
+      },
+      "integrity": {
+        "replayed_rounds": 100000,
+        "events": 2546521,
+        "compressed_bytes": 33572842,
+        "unique_event_sequences_excluding_cosmetic_variant": 100000,
+        "unique_first_boards": 99991,
+        "event_types": {
+          "roundStart": 100000,
+          "tower": 735031,
+          "reveal": 362235,
+          "spinEnd": 362128,
+          "roundEnd": 100000,
+          "win": 272903,
+          "cascade": 272796,
+          "featureTrigger": 16458,
+          "featureStart": 16458,
+          "freeSpin": 262235,
+          "featureEnd": 16458,
+          "retrigger": 29712,
+          "cap": 107
+        },
+        "tower_states_observed": {
+          "base:0:1": 389636,
+          "base:1:2": 145193,
+          "base:2:3": 56180,
+          "base:3:5": 23457,
+          "base:4:10": 85031,
+          "boosted:0:2": 2148,
+          "boosted:1:3": 2550,
+          "boosted:2:5": 2529,
+          "boosted:3:10": 2560,
+          "boosted:4:25": 25747
+        },
+        "fixtures": {
+          "zero": "ante-zero.json",
+          "tower_top": "ante-tower_top.json",
+          "retrigger": "ante-retrigger.json",
+          "max_win": "ante-max_win.json"
+        },
+        "book_lookup_candidate_match": true,
+        "size_and_event_limits_pass": true,
+        "diversity_note": "Counts measure diversity; they are not a platform quality approval."
+      },
+      "play_statistics": {
+        "probability_profit_over_mode_cost": 0.116319247882642,
+        "probability_break_even": 0.0047586436221158,
+        "probability_return_below_mode_cost": 0.8789221084952422,
+        "weighted_feature_probability": 0.0134999999999999,
+        "weighted_spins_per_round": 1.1690728108025317,
+        "unique_payout_values": 3092
+      },
+      "pinned_sdk_comparison": {
+        "metrics": {
+          "prob5k": 7.073745353880006e-05,
+          "prob10k": 3.5415148986000012e-06,
+          "etl10k": 0.0686587890764152,
+          "etl40b": 1.2615205638279834,
+          "cvar": 370.2478553056628,
+          "rtp": 0.962
+        },
+        "violations": {
+          "etl40b": 1.2615205638279834
+        },
+        "note": "Unmodified pinned SDK uses different thresholds, inclusive boundaries and ETL normalization. These warnings remain visible separately."
+      },
+      "files_sha256": {
+        "books_ante.jsonl.zst": "3740d5d46d8aefe30e0671bf8d423882452d78e7b4c9eb5af5f240f9f75fe207",
+        "lookUpTable_ante_0.csv": "9deb2b0192209cabfc5b565b15498881f66f8ac22c1c0a68d202d3c94152e947",
+        "fixtures/ante-zero.json": "937f59239d78c2c01e61a757134a31acd7a0fb394d8d586aef51c4a72f09ab12",
+        "fixtures/ante-tower_top.json": "75a0e46dd341fe45a041dc76e72fa14b0d29514f74db0344ae0f6bc92a099ee4",
+        "fixtures/ante-retrigger.json": "9be68d519029decf6672843b6c5c0798bf2dd2587425c64c22e7d25a19e7ff74",
+        "fixtures/ante-max_win.json": "da356f9e52c73692f3388ce216852f1f69aa27562e1d9319bc46874a98890490"
+      }
+    },
+    "boosted": {
+      "metrics": {
+        "mode": "boosted",
+        "cost_base_bet": 10.0,
+        "rtp": 0.962,
+        "expected_payout_base_bet": 9.62,
+        "variance_base_bet": 22499.999999979573,
+        "std_base_bet": 149.9999999999319,
+        "std_per_mode_cost": 14.99999999999319,
+        "nonzero_probability": 0.4500000000098115,
+        "prob5k_raw": 0.000279726280358,
+        "prob10k_raw": 1.0001e-06,
+        "cvar_absolute": 3393.157266529281,
+        "cvar_per_mode_cost": 339.3157266529281,
+        "etl40_cost_normalized": 0.3480283455441063,
+        "etl10k_cost_normalized": 0.002500177117671555,
+        "etl_sum": 0.3505285226617778,
+        "max_supported_payout_base_bet": 25000.0,
+        "max_win_probability": 1e-06,
+        "rows": 100000,
+        "positive_weight_rows": 100000,
+        "positive_weight_paying_rows": 51232,
+        "maximum_single_row_probability": 0.0006187495280523,
+        "effective_row_count": 75913.4296821333,
+        "total_weight": 10000000000000000
+      },
+      "checks": {
+        "critical_distribution_failures": [],
+        "target_rtp_matches": true,
+        "three_star_risk_classes": {},
+        "unverified": [
+          "frontend_authoritative_playback",
+          "ACP_statistics_parity",
+          "viable_bet_template",
+          "Stake_quality_review"
+        ]
+      },
+      "publish_ready": false,
+      "exact_rtp": "481/500",
+      "identity": {
+        "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+        "validator_sha256": "47243f7b649bc51c769ee50a2c1b2f1ead6d9b5c72d2ae1654fd81fc00353727",
+        "audit_sha256": "298e483770d61a6fa3f969f2eed88042073b087ed1a7fea01ff1347407e8d1ec",
+        "lookup_sha256": "820ba37ce5f2e3d1911a52737ceda346299de521483b63a67752a654df1e540a"
+      },
+      "integrity": {
+        "replayed_rounds": 100000,
+        "events": 1609372,
+        "compressed_bytes": 19443066,
+        "unique_event_sequences_excluding_cosmetic_variant": 100000,
+        "unique_first_boards": 99996,
+        "event_types": {
+          "roundStart": 100000,
+          "tower": 487069,
+          "reveal": 214847,
+          "spinEnd": 214690,
+          "roundEnd": 100000,
+          "win": 172379,
+          "cascade": 172222,
+          "featureTrigger": 10699,
+          "featureStart": 10699,
+          "freeSpin": 114847,
+          "featureEnd": 10699,
+          "retrigger": 1064,
+          "cap": 157
+        },
+        "tower_states_observed": {
+          "boosted:0:2": 201061,
+          "boosted:1:3": 45630,
+          "base:0:1": 88949,
+          "base:1:2": 51086,
+          "base:2:3": 21763,
+          "base:3:5": 10198,
+          "base:4:10": 29828,
+          "boosted:2:5": 18588,
+          "boosted:3:10": 7444,
+          "boosted:4:25": 12522
+        },
+        "fixtures": {
+          "zero": "boosted-zero.json",
+          "tower_top": "boosted-tower_top.json",
+          "retrigger": "boosted-retrigger.json",
+          "max_win": "boosted-max_win.json"
+        },
+        "book_lookup_candidate_match": true,
+        "size_and_event_limits_pass": true,
+        "diversity_note": "Counts measure diversity; they are not a platform quality approval."
+      },
+      "play_statistics": {
+        "probability_profit_over_mode_cost": 0.1351243534293196,
+        "probability_break_even": 0.0039688777921432,
+        "probability_return_below_mode_cost": 0.8609067687785372,
+        "weighted_feature_probability": 0.0045000000098114,
+        "weighted_spins_per_round": 1.0492246197544655,
+        "unique_payout_values": 2771
+      },
+      "pinned_sdk_comparison": {
+        "metrics": {
+          "prob5k": 0.000279726280358,
+          "prob10k": 1.0000999999999998e-06,
+          "etl10k": 0.025001771176715554,
+          "etl40b": 3.48047930078766,
+          "cvar": 337.8869834521282,
+          "rtp": 0.962
+        },
+        "violations": {
+          "etl40b": 3.48047930078766
+        },
+        "note": "Unmodified pinned SDK uses different thresholds, inclusive boundaries and ETL normalization. These warnings remain visible separately."
+      },
+      "files_sha256": {
+        "books_boosted.jsonl.zst": "3146d9c4c9f96e3126b090f9cdd63a2e3453dd0f2abe1fd9a93e5ac19dd3309e",
+        "lookUpTable_boosted_0.csv": "820ba37ce5f2e3d1911a52737ceda346299de521483b63a67752a654df1e540a",
+        "fixtures/boosted-zero.json": "baa0d3ec0ee6aa5c472267eef0f2b895949a24890cfbaaa9a59396fe37f5e990",
+        "fixtures/boosted-tower_top.json": "4df96699e4ad3fa5742512c11239d4adb83c86f80203b73224a0fb473dbfae60",
+        "fixtures/boosted-retrigger.json": "c889529ca889169bd424302d58be8e3d1a7e29593e2c74b30b9dd2027e41a00e",
+        "fixtures/boosted-max_win.json": "449620d5a40a48dc156b8b7b5a8fb0fea2fef6e75b4834a0d10b34018813d8ad"
+      }
+    },
+    "bonus": {
+      "metrics": {
+        "mode": "bonus",
+        "cost_base_bet": 100.0,
+        "rtp": 0.962,
+        "expected_payout_base_bet": 96.2,
+        "variance_base_bet": 89999.99999999967,
+        "std_base_bet": 299.99999999999943,
+        "std_per_mode_cost": 2.9999999999999942,
+        "nonzero_probability": 0.9200000000005545,
+        "prob5k_raw": 0.0006746849035749,
+        "prob10k_raw": 4.55400237446e-05,
+        "cvar_absolute": 5755.823135178245,
+        "cvar_per_mode_cost": 57.558231351782446,
+        "etl40_cost_normalized": 0.04734431326932358,
+        "etl10k_cost_normalized": 0.005424704498671372,
+        "etl_sum": 0.052769017767994954,
+        "max_supported_payout_base_bet": 25000.0,
+        "max_win_probability": 1e-06,
+        "rows": 100000,
+        "positive_weight_rows": 100000,
+        "positive_weight_paying_rows": 94976,
+        "maximum_single_row_probability": 0.0013103235546117,
+        "effective_row_count": 51978.62858266804,
+        "total_weight": 10000000000000000
+      },
+      "checks": {
+        "critical_distribution_failures": [],
+        "target_rtp_matches": true,
+        "three_star_risk_classes": {},
+        "unverified": [
+          "frontend_authoritative_playback",
+          "ACP_statistics_parity",
+          "viable_bet_template",
+          "Stake_quality_review"
+        ]
+      },
+      "publish_ready": false,
+      "exact_rtp": "481/500",
+      "identity": {
+        "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+        "validator_sha256": "47243f7b649bc51c769ee50a2c1b2f1ead6d9b5c72d2ae1654fd81fc00353727",
+        "audit_sha256": "298e483770d61a6fa3f969f2eed88042073b087ed1a7fea01ff1347407e8d1ec",
+        "lookup_sha256": "9ca59f69727e0036f0131a731ad91b08d19cee1c913b784709ca9cd2929ab36d"
+      },
+      "integrity": {
+        "replayed_rounds": 100000,
+        "events": 7479076,
+        "compressed_bytes": 105074994,
+        "unique_event_sequences_excluding_cosmetic_variant": 100000,
+        "unique_first_boards": 99912,
+        "event_types": {
+          "roundStart": 100000,
+          "featureStart": 100000,
+          "freeSpin": 1023638,
+          "tower": 2081211,
+          "reveal": 1023638,
+          "spinEnd": 1022638,
+          "featureEnd": 100000,
+          "roundEnd": 100000,
+          "win": 958573,
+          "cascade": 957573,
+          "retrigger": 10805,
+          "cap": 1000
+        },
+        "tower_states_observed": {
+          "base:0:1": 1123638,
+          "base:1:2": 577302,
+          "base:2:3": 235613,
+          "base:3:5": 88600,
+          "base:4:10": 56058
+        },
+        "fixtures": {
+          "zero": "bonus-zero.json",
+          "tower_top": "bonus-tower_top.json",
+          "retrigger": "bonus-retrigger.json",
+          "max_win": "bonus-max_win.json"
+        },
+        "book_lookup_candidate_match": true,
+        "size_and_event_limits_pass": true,
+        "diversity_note": "Counts measure diversity; they are not a platform quality approval."
+      },
+      "play_statistics": {
+        "probability_profit_over_mode_cost": 0.1917458067162362,
+        "probability_break_even": 0.0004003602289692,
+        "probability_return_below_mode_cost": 0.8078538330547946,
+        "weighted_feature_probability": 1.0,
+        "weighted_spins_per_round": 10.316088084232197,
+        "unique_payout_values": 6627
+      },
+      "pinned_sdk_comparison": {
+        "metrics": {
+          "prob5k": 0.0006746849035749001,
+          "prob10k": 4.5540023744599997e-05,
+          "etl10k": 0.5424704498671373,
+          "etl40b": 4.734431326932358,
+          "cvar": 44.57640548005623,
+          "rtp": 0.962
+        },
+        "violations": {
+          "etl40b": 4.734431326932358
+        },
+        "note": "Unmodified pinned SDK uses different thresholds, inclusive boundaries and ETL normalization. These warnings remain visible separately."
+      },
+      "files_sha256": {
+        "books_bonus.jsonl.zst": "bddfa168af84b4c74fcf64f2b15e0b7356f6b6261f95e62e2f860793856fdddd",
+        "lookUpTable_bonus_0.csv": "9ca59f69727e0036f0131a731ad91b08d19cee1c913b784709ca9cd2929ab36d",
+        "fixtures/bonus-zero.json": "7dd7c60a53e46e6b8d25148eddb772b014d5a0ec930cd1b617532574639113a0",
+        "fixtures/bonus-tower_top.json": "3e1d9e565de055d8dd115aab85ea95efcb402bee9d362e8d1f1ba8061696bede",
+        "fixtures/bonus-retrigger.json": "3e1d9e565de055d8dd115aab85ea95efcb402bee9d362e8d1f1ba8061696bede",
+        "fixtures/bonus-max_win.json": "a93a2e4c954954b44ce1ce399317831fa7eefa49d156a8c5d557220bb0ef388d"
+      }
+    },
+    "super": {
+      "metrics": {
+        "mode": "super",
+        "cost_base_bet": 300.0,
+        "rtp": 0.962,
+        "expected_payout_base_bet": 288.6,
+        "variance_base_bet": 1102500.000000009,
+        "std_base_bet": 1050.0000000000043,
+        "std_per_mode_cost": 3.500000000000014,
+        "nonzero_probability": 0.9399999999978299,
+        "prob5k_raw": 0.0109966935057682,
+        "prob10k_raw": 0.0017887005584068,
+        "cvar_absolute": 12809.488859092235,
+        "cvar_per_mode_cost": 42.69829619697411,
+        "etl40_cost_normalized": 0.030607724467948915,
+        "etl10k_cost_normalized": 0.0708530811774599,
+        "etl_sum": 0.10146080564540881,
+        "max_supported_payout_base_bet": 25000.0,
+        "max_win_probability": 1e-06,
+        "rows": 100000,
+        "positive_weight_rows": 100000,
+        "positive_weight_paying_rows": 94995,
+        "maximum_single_row_probability": 0.0001375154275698,
+        "effective_row_count": 65310.847462856735,
+        "total_weight": 10000000000000000
+      },
+      "checks": {
+        "critical_distribution_failures": [],
+        "target_rtp_matches": true,
+        "three_star_risk_classes": {},
+        "unverified": [
+          "frontend_authoritative_playback",
+          "ACP_statistics_parity",
+          "viable_bet_template",
+          "Stake_quality_review"
+        ]
+      },
+      "publish_ready": false,
+      "exact_rtp": "481/500",
+      "identity": {
+        "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+        "validator_sha256": "47243f7b649bc51c769ee50a2c1b2f1ead6d9b5c72d2ae1654fd81fc00353727",
+        "audit_sha256": "298e483770d61a6fa3f969f2eed88042073b087ed1a7fea01ff1347407e8d1ec",
+        "lookup_sha256": "100a5acef961d129472659a7ee7a459adb62eb400570ce70239fc36f32cff6a4"
+      },
+      "integrity": {
+        "replayed_rounds": 100000,
+        "events": 8859617,
+        "compressed_bytes": 126562744,
+        "unique_event_sequences_excluding_cosmetic_variant": 100000,
+        "unique_first_boards": 99909,
+        "event_types": {
+          "roundStart": 100000,
+          "featureStart": 100000,
+          "freeSpin": 1227384,
+          "tower": 2472835,
+          "reveal": 1227384,
+          "spinEnd": 1226384,
+          "featureEnd": 100000,
+          "roundEnd": 100000,
+          "win": 1146451,
+          "cascade": 1145451,
+          "retrigger": 12728,
+          "cap": 1000
+        },
+        "tower_states_observed": {
+          "base:0:1": 321264,
+          "base:1:2": 191278,
+          "base:2:3": 193032,
+          "base:3:5": 192927,
+          "base:4:10": 1574334
+        },
+        "fixtures": {
+          "zero": "super-zero.json",
+          "tower_top": "super-tower_top.json",
+          "retrigger": "super-retrigger.json",
+          "max_win": "super-max_win.json"
+        },
+        "book_lookup_candidate_match": true,
+        "size_and_event_limits_pass": true,
+        "diversity_note": "Counts measure diversity; they are not a platform quality approval."
+      },
+      "play_statistics": {
+        "probability_profit_over_mode_cost": 0.0719945276874755,
+        "probability_break_even": 6.3891936841e-05,
+        "probability_return_below_mode_cost": 0.9279415803756835,
+        "weighted_feature_probability": 1.0,
+        "weighted_spins_per_round": 12.334636718142137,
+        "unique_payout_values": 21286
+      },
+      "pinned_sdk_comparison": {
+        "metrics": {
+          "prob5k": 0.00879735480461458,
+          "prob10k": 0.0014309604467254405,
+          "etl10k": 21.25592435323797,
+          "etl40b": 9.182317340384675,
+          "cvar": 42.29097371681196,
+          "rtp": 0.962
+        },
+        "violations": {
+          "etl40b": 9.182317340384675,
+          "etl10k": 21.25592435323797
+        },
+        "note": "Unmodified pinned SDK uses different thresholds, inclusive boundaries and ETL normalization. These warnings remain visible separately."
+      },
+      "files_sha256": {
+        "books_super.jsonl.zst": "7c2c5358fb6b5dac45288c4a4ebbc763e844119d339aafc19a895dc526eb70ba",
+        "lookUpTable_super_0.csv": "100a5acef961d129472659a7ee7a459adb62eb400570ce70239fc36f32cff6a4",
+        "fixtures/super-zero.json": "b047c94cf16f5f0219245b570e3ae3e3d8cbdeb8bce0026c2b2a8a7109493248",
+        "fixtures/super-tower_top.json": "630dce13b4fea9e4b671e745957e7796ac7433078ffbbc9b1cf455db2cf34f70",
+        "fixtures/super-retrigger.json": "9376f85b178834753ee88f784140f687f3788d66f085efde65ae9881dea7cd78",
+        "fixtures/super-max_win.json": "748e811c4e64a093ac9f2c4e95c27b7f0f4f378b9a0ed255c237091a0781664e"
+      }
+    },
+    "hidden": {
+      "metrics": {
+        "mode": "hidden",
+        "cost_base_bet": 500.0,
+        "rtp": 0.962,
+        "expected_payout_base_bet": 481.0,
+        "variance_base_bet": 3062500.0000000363,
+        "std_base_bet": 1750.0000000000105,
+        "std_per_mode_cost": 3.500000000000021,
+        "nonzero_probability": 0.9500000000296728,
+        "prob5k_raw": 0.0246063674694454,
+        "prob10k_raw": 0.0099000000000026,
+        "cvar_absolute": 20502.36047815566,
+        "cvar_per_mode_cost": 41.00472095631132,
+        "etl40_cost_normalized": 0.021556338905004167,
+        "etl10k_cost_normalized": 0.285095641811507,
+        "etl_sum": 0.3066519807165111,
+        "max_supported_payout_base_bet": 25000.0,
+        "max_win_probability": 1e-06,
+        "rows": 100000,
+        "positive_weight_rows": 100000,
+        "positive_weight_paying_rows": 94996,
+        "maximum_single_row_probability": 2.58952905631e-05,
+        "effective_row_count": 54618.85074149567,
+        "total_weight": 10000000000000000
+      },
+      "checks": {
+        "critical_distribution_failures": [],
+        "target_rtp_matches": true,
+        "three_star_risk_classes": {},
+        "unverified": [
+          "frontend_authoritative_playback",
+          "ACP_statistics_parity",
+          "viable_bet_template",
+          "Stake_quality_review"
+        ]
+      },
+      "publish_ready": false,
+      "exact_rtp": "481/500",
+      "identity": {
+        "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+        "validator_sha256": "47243f7b649bc51c769ee50a2c1b2f1ead6d9b5c72d2ae1654fd81fc00353727",
+        "audit_sha256": "298e483770d61a6fa3f969f2eed88042073b087ed1a7fea01ff1347407e8d1ec",
+        "lookup_sha256": "f51c0431a0ce6e247c21c18ee595f6b64671e68ff3c2c060551916d44c071c4c"
+      },
+      "integrity": {
+        "replayed_rounds": 100000,
+        "events": 8851462,
+        "compressed_bytes": 126682170,
+        "unique_event_sequences_excluding_cosmetic_variant": 100000,
+        "unique_first_boards": 99928,
+        "event_types": {
+          "roundStart": 100000,
+          "featureStart": 100000,
+          "freeSpin": 1227173,
+          "tower": 2470192,
+          "reveal": 1227173,
+          "spinEnd": 1226164,
+          "featureEnd": 100000,
+          "roundEnd": 100000,
+          "win": 1144028,
+          "cascade": 1143019,
+          "retrigger": 12704,
+          "cap": 1009
+        },
+        "tower_states_observed": {
+          "boosted:0:2": 221218,
+          "base:0:1": 100000,
+          "boosted:1:3": 190827,
+          "boosted:2:5": 193386,
+          "boosted:3:10": 191681,
+          "boosted:4:25": 1573080
+        },
+        "fixtures": {
+          "zero": "hidden-zero.json",
+          "tower_top": "hidden-tower_top.json",
+          "retrigger": "hidden-retrigger.json",
+          "max_win": "hidden-max_win.json"
+        },
+        "book_lookup_candidate_match": true,
+        "size_and_event_limits_pass": true,
+        "diversity_note": "Counts measure diversity; they are not a platform quality approval."
+      },
+      "play_statistics": {
+        "probability_profit_over_mode_cost": 0.0576958169847658,
+        "probability_break_even": 1.71396747926e-05,
+        "probability_return_below_mode_cost": 0.9422870433404416,
+        "weighted_feature_probability": 1.0,
+        "weighted_spins_per_round": 12.256351897922457,
+        "unique_payout_values": 30532
+      },
+      "pinned_sdk_comparison": {
+        "metrics": {
+          "prob5k": 0.01230318373472264,
+          "prob10k": 0.004950000000001258,
+          "etl10k": 142.54782090575358,
+          "etl40b": 10.778169452502082,
+          "cvar": 40.97815148512863,
+          "rtp": 0.962
+        },
+        "violations": {
+          "prob5k": 0.01230318373472264,
+          "etl40b": 10.778169452502082,
+          "etl10k": 142.54782090575358
+        },
+        "note": "Unmodified pinned SDK uses different thresholds, inclusive boundaries and ETL normalization. These warnings remain visible separately."
+      },
+      "files_sha256": {
+        "books_hidden.jsonl.zst": "7e743c71b5587a64eff6c03f5056631d7f15bd5cfa6c915549afd35d57f572e2",
+        "lookUpTable_hidden_0.csv": "f51c0431a0ce6e247c21c18ee595f6b64671e68ff3c2c060551916d44c071c4c",
+        "fixtures/hidden-zero.json": "5e603002a2fc9a7f1c0377c0c7b5598bf951be69b33c4947870d4d68c173f3a8",
+        "fixtures/hidden-tower_top.json": "a5299090d516382531c9eb55f83848889c817aa607ea13f8ce2b7497b234b0ce",
+        "fixtures/hidden-retrigger.json": "9c7d65169045537c4f3e2e28cda02560481db4734634e32ab0840e5d49b87063",
+        "fixtures/hidden-max_win.json": "8589fe870cbfea903e546183777ad71ca9694782afe6fb421e4d0fcdd8e6309a"
+      }
+    },
+    "maxzero": {
+      "metrics": {
+        "mode": "maxzero",
+        "cost_base_bet": 1000.0,
+        "rtp": 0.962,
+        "expected_payout_base_bet": 962.0,
+        "variance_base_bet": 23124556.0,
+        "std_base_bet": 4808.799850274494,
+        "std_per_mode_cost": 4.808799850274494,
+        "nonzero_probability": 0.03848,
+        "prob5k_raw": 0.03848,
+        "prob10k_raw": 0.03848,
+        "cvar_absolute": 25000.0,
+        "cvar_per_mode_cost": 25.0,
+        "etl40_cost_normalized": 0.0,
+        "etl10k_cost_normalized": 0.962,
+        "etl_sum": 0.962,
+        "max_supported_payout_base_bet": 25000.0,
+        "max_win_probability": 0.03848,
+        "rows": 100000,
+        "positive_weight_rows": 100000,
+        "positive_weight_paying_rows": 50000,
+        "maximum_single_row_probability": 1.92304e-05,
+        "effective_row_count": 53995.597497899646,
+        "total_weight": 10000000000000000
+      },
+      "checks": {
+        "critical_distribution_failures": [],
+        "target_rtp_matches": true,
+        "three_star_risk_classes": {
+          "tail_probability": {
+            "prob10k_raw": {
+              "value": 0.03848,
+              "limit": 0.01
+            }
+          },
+          "tail_liability": {
+            "etl10k_cost_normalized": {
+              "value": 0.962,
+              "limit": 0.8
+            }
+          }
+        },
+        "unverified": [
+          "frontend_authoritative_playback",
+          "ACP_statistics_parity",
+          "viable_bet_template",
+          "Stake_quality_review"
+        ]
+      },
+      "publish_ready": false,
+      "exact_rtp": "481/500",
+      "identity": {
+        "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+        "validator_sha256": "47243f7b649bc51c769ee50a2c1b2f1ead6d9b5c72d2ae1654fd81fc00353727",
+        "audit_sha256": "298e483770d61a6fa3f969f2eed88042073b087ed1a7fea01ff1347407e8d1ec",
+        "lookup_sha256": "8113d585fa9e662624c5ace795313b58e97c2e002324008c9d1a753205ac565a"
+      },
+      "integrity": {
+        "replayed_rounds": 100000,
+        "events": 400000,
+        "compressed_bytes": 803244,
+        "unique_event_sequences_excluding_cosmetic_variant": 2,
+        "unique_first_boards": 0,
+        "event_types": {
+          "roundStart": 100000,
+          "binaryResult": 100000,
+          "tower": 100000,
+          "roundEnd": 100000
+        },
+        "tower_states_observed": {
+          "base:0:1": 100000
+        },
+        "fixtures": {
+          "zero": "maxzero-zero.json",
+          "max_win": "maxzero-max_win.json"
+        },
+        "book_lookup_candidate_match": true,
+        "size_and_event_limits_pass": true,
+        "diversity_note": "Binary mode intentionally has only two mathematical outcomes; cosmetic variants are excluded from sequence diversity."
+      },
+      "play_statistics": {
+        "probability_profit_over_mode_cost": 0.03848,
+        "probability_break_even": 0.0,
+        "probability_return_below_mode_cost": 0.96152,
+        "weighted_feature_probability": 0.0,
+        "weighted_spins_per_round": 0.0,
+        "unique_payout_values": 2
+      },
+      "pinned_sdk_comparison": {
+        "metrics": {
+          "prob5k": 0.007696000000000001,
+          "prob10k": 0.007696000000000001,
+          "etl10k": 962.0,
+          "etl40b": 0,
+          "cvar": 25.0,
+          "rtp": 0.962
+        },
+        "violations": {
+          "prob10k": 0.007696000000000001,
+          "etl10k": 962.0
+        },
+        "note": "Unmodified pinned SDK uses different thresholds, inclusive boundaries and ETL normalization. These warnings remain visible separately."
+      },
+      "files_sha256": {
+        "books_maxzero.jsonl.zst": "ed409fe872bd04c96d2010f0f711f4a9151c2d1e551e40b37a87330b54ccdb5d",
+        "lookUpTable_maxzero_0.csv": "8113d585fa9e662624c5ace795313b58e97c2e002324008c9d1a753205ac565a",
+        "fixtures/maxzero-zero.json": "fb1c5ff2b275228b1321c80281e08cd509a6dcf9bd63bdfc408802a55161278b",
+        "fixtures/maxzero-max_win.json": "85520a746639d941aa37b8ebc14338d27285a966a48679619c04d6054e24dbb8"
+      }
+    }
+  },
+  "complete": true,
+  "publish_ready": false
+}
