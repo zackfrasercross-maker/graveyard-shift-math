@@ -1,0 +1,4 @@
+# Versions used with Python 3.12.14 for this verified weighting checkpoint.
+numpy==2.3.5
+scipy==1.17.0
+zstandard==0.25.0

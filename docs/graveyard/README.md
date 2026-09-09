@@ -1,39 +1,37 @@
 # Graveyard math workbench
 
-This branch contains a contract, exact distribution auditor, regression tests and an analytical feasibility report. It does **not** contain a finished slot model, certified RTP for seven modes, event books, or a Stake-ready submission. Resume from [WORK_CHECKPOINT.md](WORK_CHECKPOINT.md).
+This branch implements the approved 1,024-way cascading game, all seven modes, authoritative multiplier-tower events, independent payout replay, deterministic candidate generation and exact whole-round integer weighting. Resume from WORK_CHECKPOINT.md; GAME_RULES.md defines the working rules.
 
-## Run
+All seven weighted distributions achieve exactly 481/500 (96.2%) of their actual mode cost. This is theoretical lookup RTP, not a promise about finite play sessions. The 100,000 candidates per mode deliberately oversample different conditions; their unweighted average is not the game's RTP. Selection weights tune valid complete rounds, never replace payouts or events.
 
-From the repository root (Python):
+## Reproduce
 
-```sh
-python -m unittest games.graveyard_shift.test_audit -v
-python -m games.graveyard_shift.audit --maxzero-feasibility
-python -m games.graveyard_shift.checkpoint
-```
+Use Python 3.12 and requirements-graveyard.txt. Run from the repository root:
 
-The first two commands use the standard library. The checkpoint command additionally uses the repository's SDK dependencies to compare its actual verifier. It saves `maxzero-feasibility.json`.
+    python -m pip install -r requirements-graveyard.txt
+    python -m unittest discover -s games/graveyard_shift -p 'test_*.py'
+    python -m games.graveyard_shift.simulate --output /tmp/graveyard-runs --count 100000 --workers 4
+    python -m games.graveyard_shift.optimize /tmp/graveyard-runs/d476a9c7741ee124 --output /tmp/graveyard-weights
+    python -m games.graveyard_shift.export /tmp/graveyard-runs/d476a9c7741ee124 /tmp/graveyard-weights --output /tmp/graveyard-verified --workers 4
 
-Later, audit a real weighted lookup table:
+Use the actual fingerprint directory printed by generation if later source changes alter it. Resume the same commands after interruption. Completed batches and exports are reused only when identities and checksums agree. Optimizer results are saved atomically after each mode.
 
-```sh
-python -m games.graveyard_shift.audit --mode base --lut path/to/lookUpTable_base_0.csv
-```
+If restored data is damaged, run the repair module with the candidate directory. It regenerates damaged batches and refuses replacement unless the original compressed event-file SHA256 is reproduced with the original seed.
 
-Input is headerless `id,weight,payoutMultiplier`. Non-integers, invalid weights, duplicate IDs, above-cap prizes and invalid Max Win or Zero prizes are rejected. A successful numerical audit is not an event-book validation. Cross-mode analysis is available as `suite_report` and requires all seven modes.
+## Outputs and current status
 
-## What the numbers mean
+The exporter produces index.json, seven compressed event books, seven headerless id/weight/payoutMultiplier lookup tables, per-mode integrity/risk reports, frontend contract/rules, replay fixtures and checksums. Final files are independently replayed and joined to lookups: IDs, ways, awards, survivor order, tower transitions, free-spin counts and round caps must agree.
 
-For the locked binary feature, 481 winning weight units out of 12,500 gives exactly 96.2% RTP at 1,000× cost and a 25,000× base-bet prize. Those are two payout classes, **not** a production simulation population. This mode cannot be tuned by adding smaller prizes without changing its advertised identity.
+weighting-audit.json is the saved seven-mode numerical result. Final assembled-file verification was interrupted by an execution-environment disconnect: six modes had completed, while Hidden Bonus final replay and the combined export still need confirmation. No completed downloadable data archive is being claimed. Source and reproduction commands are saved on this branch.
 
-The other mode means required by the RTP target are 0.962×, 2.886×, 9.62×, 96.2×, 288.6× and 481× base bet, respectively. These are target means, not measured game returns. Many incompatible distributions can share these means; neither RTP nor a volatility label defines the actual game rules.
+Event amounts are hundredths of a base bet, not wallet currency units. Neither buy cost nor tower multiplies the shared 25,000× round cap. maxzero-feasibility.json is an earlier analytical checkpoint, not the final seven-mode result.
 
-## Risk interpretation
+## Quality and risk
 
-The current-profile analytical result exceeds the tail-probability and tail-liability classes. These are non-critical risk checks; final exposure/template consequences depend on the whole game. The SDK separately reports its older thresholds and normalization. The auditor never suppresses or edits those warnings.
+Base standard deviation is 35 base bets. These measured distributions are not a verified match to a competitor's proprietary math or evidence that the game is trending.
 
-Current ETL is implemented as `E[payout × indicator] / mode_cost`, using strict threshold comparisons. CVaR uses exactly the top 0.1% probability, splitting a discrete boundary atom. Confirm these conventions against ACP statistics during actual submission; they differ from the SDK's inclusive-boundary CVaR and ETL implementation. No platform-parity certification is claimed.
+Six modes pass the implemented current distribution-risk profile. Max Win or Zero retains two prizes: zero or 25,000×. At 1,000× cost its exact hit probability is 481/12500 (3.848%). Tail-probability and tail-liability risk classes remain exceeded and require template assessment.
 
-## Still required
+Current-profile ETL is E[payout × indicator] / mode_cost with strict comparisons. CVaR uses exactly the upper 0.1% probability, splitting boundary atoms. The pinned SDK uses different thresholds, inclusive boundaries and ETL normalization. Its warnings are separately recorded rather than suppressed. ACP parity must be confirmed at submission.
 
-Approved winning and bonus rules; a deterministic seeded game generator with genuine cascade/feature events; independent payout replay; weighted optimization of complete rounds; 100k–1m varied simulations per slot mode; event/lookup integrity; risk and diversity reports; and frontend/RGS replay verification. Forced simulation quotas must never be mistaken for final sampling probabilities. Do not use the frontend's QA fixtures as production outcomes.
+Live frontend event playback, visual tower alignment, ACP statistics/templates and Stake's overall quality review remain outstanding. No three-star award, certification or deployment is claimed. See FRONTEND_HANDOFF.md before replacing preview outcomes with authoritative events.

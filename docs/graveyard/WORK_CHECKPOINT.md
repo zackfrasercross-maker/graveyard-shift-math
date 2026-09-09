@@ -1,5 +1,42 @@
 # Graveyard math checkpoint
 
+## Latest saved state — resume here
+
+Updated 2026-09-09 after the execution environment disconnected.
+
+- The approved 1,024-way rules and all seven mode generators are complete in source. Do not restart from an older frontend or ask for winning geometry again.
+- Source, simulator, exact optimizer, exporter, tests and seven-mode weighting report are saved in remote commit b081ed48d57e1ff11a813116d4cc392fd4180e31. Subsequent documentation/recovery changes do not change the model fingerprint.
+- 36 audit/engine/pipeline tests passed. 700,000 candidates (100,000 per mode) were independently replayed during generation; zero safety-limit candidate rejections.
+- Every final lookup has exact RTP 481/500 (96.2%). All six non-binary modes pass the implemented current distribution-risk profile. Maxzero retains tail probability and tail liability risk classes. See weighting-audit.json; do not claim Stake certification.
+- Standard deviation per mode cost: base 35; ante 25; boosted 15; bonus 3; super 3.5; hidden 3.5; maxzero 4.809219894... approximately. Read the exact recorded float from weighting-audit.json rather than treating this rounded value as a gate.
+- Original hidden batch 74000 had an empty summary CSV. Same-seed regeneration reproduced the original compressed-book SHA256 and rebuilt the summary.
+- Hidden batch 56000 had a compressed-file checksum mismatch after restoration. repair.py regenerated it and matched the original expected event SHA256 before replacing it. A complete checksum scan found no other damaged batches.
+- Final assembled-file replay completed for base (1,611,389 events), ante (2,546,521), boosted (1,609,372), bonus (7,479,076), super (8,859,617), maxzero (400,000). Each had 100,000 ID/payout/summary-matched rounds. Hidden final replay and the combined final archive remain unconfirmed because the execution environment went offline.
+- The unmodified SDK independently warns on ETL40 for ante, boosted and bonus; on ETL40/ETL10k for super; and on P10k/ETL10k for maxzero. These are separately reported from the current documented profile because its formulas/units differ. Hidden's SDK result still needs collection.
+- Frontend branch remains at 8362f2fd1dcc6e90b7fd7c58e507de5cb61e48f9; config.ts and art.ts blob hashes still match contract.json. Live event integration and visual tower placement are not verified by offline math.
+
+## Exact next actions
+
+1. Reconnect the execution environment. Inspect existing final reports before regenerating anything. The most recent export command was running when connectivity failed; it may have completed.
+2. Existing workspace: /workspace/scratch/b527f7704526/graveyard-shift-math.
+3. Candidates: /workspace/scratch/b527f7704526/math-runs/d476a9c7741ee124.
+4. Weights: /workspace/scratch/b527f7704526/math-weighted-v1.
+5. Final export: /workspace/scratch/b527f7704526/graveyard-math-verified-v1. Inspect verification.json, export-progress.json and audit_hidden.json. Re-run the export command only to resume/validate: it reuses already completed files if validator/model/weights/file hashes match.
+6. Collect all seven final integrity reports, verify totals and preserve a generated-data archive. No completed archive has been delivered or durably saved yet. The source and seeds can reproduce it if local data is lost.
+7. Update this checkpoint and README with observed results. Add the final report/fixture mapping to GitHub in another small commit.
+8. Frontend integration remains separate: use FRONTEND_HANDOFF.md, especially array-cell conversion, tier indexing, feature persistence, capped-spin termination, and wallet amount units. Do not claim visual reference alignment from math tests.
+9. ACP statistics parity, viable bet template and Stake's full quality review remain release gates. No main-branch merge or deployment is authorized by this checkpoint.
+
+## Recovery instructions
+
+Use requirements-graveyard.txt (Python 3.12; NumPy 2.3.5, SciPy 1.17.0, zstandard 0.25.0). README.md contains complete commands. Generation fingerprint is d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d. The five fingerprinted files are engine.py, replay.py, simulate.py, rules.json and contract.json. Do not edit them and reuse old populations as if nothing changed.
+
+Local and remote commit metadata differ because checkpoints were published through Git data tools; their trees were compared before each successful publication. Preserve local work when reconciling; do not reset a user's checkout. Subsequent doc/recovery checkpoint files were saved directly through GitHub while execution was unavailable.
+
+
+## Earlier milestone history
+
+
 Branch: `codex/graveyard-math-foundation`. Start here after a reset.
 
 ## Confirmed state
