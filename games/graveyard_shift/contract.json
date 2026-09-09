@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "game_id": "graveyard_shift",
+  "frontend_commit": "8362f2fd1dcc6e90b7fd7c58e507de5cb61e48f9",
+  "frontend_config_blob": "79fea6e601ed068d50ac7df7420c2ab39fd8a3b0",
+  "frontend_art_blob": "17d137f6b0fd0c5d699c2245007665781c1ac15a",
+  "grid": {"reels": 5, "rows": 4, "order": "column-major", "presentation": "cascade"},
+  "target_rtp": "0.962",
+  "internal_target_tolerance": "0.000001",
+  "cost_unit": "base_bet",
+  "max_payout_base_bet": 25000,
+  "payout_multiplier_scale": 100,
+  "volatility_intent": "very-high",
+  "multiplier_ladders": {"base": [1, 2, 3, 5, 10], "boosted": [2, 3, 5, 10, 25]},
+  "symbols": ["thermos", "shovel", "keys", "raven", "lantern", "checklist", "sleepyGhost", "blackCat", "tombstone", "caretakerSymbol", "wild", "scatter"],
+  "config_symbol_aliases": {"caretaker": "caretakerSymbol"},
+  "modes": [
+    {"id": "base", "config_id": "base", "name": "Base Game", "cost": 1},
+    {"id": "ante", "config_id": "overtimeAnte", "name": "Overtime Ante", "cost": 3},
+    {"id": "boosted", "config_id": "boostedMultiplier", "name": "Boosted Multiplier", "cost": 10},
+    {"id": "bonus", "config_id": "overtimeFreeSpins", "name": "Overtime Free Spins", "cost": 100},
+    {"id": "super", "config_id": "eternalOvertime", "name": "Eternal Overtime", "cost": 300},
+    {"id": "hidden", "config_id": "secretShift", "name": "Secret Shift", "cost": 500},
+    {"id": "maxzero", "config_id": "maxWinOrZero", "name": "Max Win or Zero", "cost": 1000}
+  ],
+  "payout_model": null,
+  "rules_pending": ["winning_geometry", "paytable", "wild_rules", "scatter_trigger_rules", "ante_enhancement", "bonus_spin_counts", "bonus_mode_differences", "retrigger_rules", "multiplier_progression_and_reset", "cascade_cap_handling"],
+  "status": "contract-and-analysis-only-not-publishable"
+}
