@@ -34,3 +34,13 @@ Make small commits after useful verified milestones, with the next step recorded
 ## Design status
 
 Winning geometry is resolved. Do not ask for it again. Read `GAME_RULES.md` and `rules.json`; earlier frontend preview fixtures are not production outcomes. Mathematical fit, outcome diversity, current risk profiles and live integration remain to be validated.
+
+## Candidate checkpoint (2026-09-09)
+
+- Generator checkpoint saved remotely at `9ad42572be5de7f966228d65d8584dc40ad40922`.
+- `simulate.py` now provides deterministic 1,000-round batches, checksums and atomic progress snapshots. Every candidate is independently replayed before writing.
+- Run `python -m games.graveyard_shift.simulate --output /tmp/graveyard-runs --count 100000 --workers 4` to reproduce 100,000 candidates per mode, seed 20260909. Generation fingerprint: `d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d`.
+- 700,000 candidate rounds generated with no safety-limit rejections. These are deliberately stratified candidates, NOT final selection probabilities or claimed RTP.
+- Resume validation detected one empty hidden-mode summary CSV; deterministic regeneration is being checked against the original compressed-book hash before weighting continues.
+- 32 audit/engine tests pass, including strict integer events, retrigger cap, tower advancement, per-feature persistence and final restoration.
+- Next checkpoint: complete integer weight fitting for all seven modes, then independently validate assembled exports and publish measured reports.

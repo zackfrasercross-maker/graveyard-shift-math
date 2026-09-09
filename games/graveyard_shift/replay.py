@@ -2,8 +2,6 @@
 
 Does not call the generator's ways evaluator, tower class or spin loop.
 """
-from itertools import product
-
 from games.graveyard_shift.engine import RULES, CONTRACT, RULES_HASH, SYMBOLS, CAP
 
 
@@ -46,7 +44,7 @@ class Replay:
         self.book, self.events, self.pos, self.total = book, book["events"], 0, 0
         self.spins, self.wins, self.features, self.maximum_level = 0, 0, [], 0
         for index, event in enumerate(self.events):
-            require(event.get("index") == index, "event sequence index")
+            require(type(event.get("index")) is int and event["index"] == index, "event sequence index")
 
     def take(self, kind, **expected):
         require(self.pos < len(self.events), f"missing {kind}")
@@ -54,6 +52,8 @@ class Replay:
         self.pos += 1
         require(event.get("type") == kind, f"expected {kind}, got {event.get('type')}")
         for key, value in expected.items():
+            if type(value) in (int, bool):
+                require(type(event.get(key)) is type(value), f"{kind}.{key} integer/boolean type")
             require(event.get(key) == value, f"{kind}.{key} mismatch")
         return event
 

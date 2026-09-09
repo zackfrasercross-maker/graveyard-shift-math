@@ -1,7 +1,7 @@
 import copy
 import json
 import unittest
-from games.graveyard_shift.engine import CAP, RULES, Source, Tower, evaluate, generate
+from games.graveyard_shift.engine import CAP, RULES, RULES_HASH, Round, Source, Tower, evaluate, generate
 from games.graveyard_shift.replay import reference_ways, verify
 
 
@@ -80,6 +80,30 @@ class EngineTests(unittest.TestCase):
     def test_seed_reproducibility(self):
         self.assertEqual(generate("hidden", 19), generate("hidden", 19))
         self.assertNotEqual(generate("hidden", 19), generate("hidden", 20))
+
+    def test_retriggers_awarded_once_per_spin_and_limited_to_five(self):
+        class AlwaysScatter:
+            def board(self):
+                return [["scatter", "thermos", "thermos", "thermos"],
+                        ["scatter", "shovel", "shovel", "shovel"],
+                        ["scatter", "keys", "keys", "keys"],
+                        ["raven"] * 4, ["lantern"] * 4]
+        round_ = Round("bonus", AlwaysScatter())
+        round_.emit("roundStart", mode="bonus", cost=100, rulesHash=RULES_HASH)
+        round_.feature("bonus")
+        round_.events.append(Tower("base").event("round_restore"))
+        round_.emit("roundEnd", total=round_.total)
+        for i, event in enumerate(round_.events):
+            event["index"] = i
+        book = {"id": 0, "events": round_.events, "payoutMultiplier": 0}
+        self.assertEqual(verify(book, "bonus")["spins"], 25)
+        self.assertEqual(sum(e["type"] == "retrigger" for e in round_.events), 5)
+
+    def test_float_event_amounts_rejected(self):
+        book = generate("base", 1)
+        book["events"][-1]["total"] = float(book["events"][-1]["total"])
+        with self.assertRaises(ValueError):
+            verify(book, "base")
 
 
 if __name__ == "__main__":
