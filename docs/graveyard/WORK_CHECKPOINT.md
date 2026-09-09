@@ -44,3 +44,15 @@ Winning geometry is resolved. Do not ask for it again. Read `GAME_RULES.md` and 
 - Resume validation detected one empty hidden-mode summary CSV; deterministic regeneration is being checked against the original compressed-book hash before weighting continues.
 - 32 audit/engine tests pass, including strict integer events, retrigger cap, tower advancement, per-feature persistence and final restoration.
 - Next checkpoint: complete integer weight fitting for all seven modes, then independently validate assembled exports and publish measured reports.
+
+## Integer-weight checkpoint (2026-09-09)
+
+- Simulation/replay source saved remotely at `f56f5382e8098de02f3ecb2b62624acbea8bc722`.
+- Hidden batch summary repaired by regenerating the same seed; compressed-book SHA256 matched the original exactly. All seven candidate ID sequences now contain 100,000 complete rows.
+- Final integer weights produce exact `481/500` RTP in ALL seven modes; complete-round events/payouts were not edited. `weighting-audit.json` records measurements.
+- Standard deviation per mode cost: base 35, ante 25, boosted 15, bonus 3, super 3.5, hidden 3.5, maxzero approximately 4.809. The hidden target was lowered from an infeasible 4 to 3.5 with explicit tail-risk margin. This is not a competitor-math comparison.
+- Six modes pass the implemented current distribution-risk profile. Binary maxzero retains tail probability and tail liability risk classes by design; do not hide these or modify the SDK.
+- 36 tests pass, including multi-frame compressed-file compatibility with the unmodified SDK, integer rounding feasibility, malformed batch summaries and payout/event joins.
+- Run optimizer: `python -m games.graveyard_shift.optimize /tmp/graveyard-runs/d476a9c7741ee124 --output /tmp/graveyard-weights`.
+- Run final export: `python -m games.graveyard_shift.export /tmp/graveyard-runs/d476a9c7741ee124 /tmp/graveyard-weights --output /tmp/graveyard-verified --workers 4`. It independently replays final assembled files and resumes only identical validated outputs.
+- Final-file replay is currently running. NEXT: collect seven final integrity reports, compare SDK warnings, save a reproducible generated-data archive, document frontend tower/event integration limits.

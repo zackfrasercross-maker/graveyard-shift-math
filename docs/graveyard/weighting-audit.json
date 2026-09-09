@@ -1,0 +1,409 @@
+{
+  "stage": "weighted-distributions-event-assembly-pending",
+  "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+  "modes": {
+    "base": {
+      "metrics": {
+        "mode": "base",
+        "cost_base_bet": 1.0,
+        "rtp": 0.962,
+        "expected_payout_base_bet": 0.962,
+        "variance_base_bet": 1224.9999999540657,
+        "std_base_bet": 34.9999999993438,
+        "std_per_mode_cost": 34.9999999993438,
+        "nonzero_probability": 0.300000000015576,
+        "prob5k_raw": 1.0001979166e-06,
+        "prob10k_raw": 1.0001e-06,
+        "cvar_absolute": 508.92740373324295,
+        "cvar_per_mode_cost": 508.92740373324295,
+        "etl40_cost_normalized": 0.5310042623018904,
+        "etl10k_cost_normalized": 0.02500179128444788,
+        "etl_sum": 0.5560060535863381,
+        "max_supported_payout_base_bet": 25000.0,
+        "max_win_probability": 1e-06,
+        "rows": 100000,
+        "positive_weight_rows": 100000,
+        "positive_weight_paying_rows": 51074,
+        "maximum_single_row_probability": 0.003149997343722,
+        "effective_row_count": 42537.752917319405,
+        "total_weight": 10000000000000000
+      },
+      "checks": {
+        "critical_distribution_failures": [],
+        "target_rtp_matches": true,
+        "three_star_risk_classes": {},
+        "unverified": [
+          "gameplay_rules",
+          "book_event_integrity",
+          "simulation_diversity",
+          "book_size_and_event_count",
+          "viable_bet_template",
+          "frontend_playback",
+          "Stake_review"
+        ]
+      },
+      "publish_ready": false,
+      "exact_rtp": "481/500",
+      "tuning": {
+        "method": "whole-round-bucket-linear-program-with-exact-integer-repair",
+        "internal_shape_targets": {
+          "zero": 0.7,
+          "std": 35,
+          "feature": 0.0045
+        },
+        "buckets": 33,
+        "maxwin_probability_target": "1/1000000",
+        "events_modified": false
+      },
+      "weighted_feature_probability": 0.0044999999999999,
+      "weighted_average_spins": 1.0465568921867774,
+      "lookup_sha256": "ee1f65a9a6739273d653a70f203c8fcf3ac458e6de0bbf275e9a1acb2b01fe3e"
+    },
+    "ante": {
+      "metrics": {
+        "mode": "ante",
+        "cost_base_bet": 3.0,
+        "rtp": 0.962,
+        "expected_payout_base_bet": 2.886,
+        "variance_base_bet": 5624.999999961875,
+        "std_base_bet": 74.99999999974584,
+        "std_per_mode_cost": 24.99999999991528,
+        "nonzero_probability": 0.3800000000122434,
+        "prob5k_raw": 7.07374535388e-05,
+        "prob10k_raw": 3.5415148986e-06,
+        "cvar_absolute": 1111.278473134892,
+        "cvar_per_mode_cost": 370.4261577116307,
+        "etl40_cost_normalized": 0.4183234597198353,
+        "etl10k_cost_normalized": 0.022886263025471733,
+        "etl_sum": 0.441209722745307,
+        "max_supported_payout_base_bet": 25000.0,
+        "max_win_probability": 1e-06,
+        "rows": 100000,
+        "positive_weight_rows": 100000,
+        "positive_weight_paying_rows": 51589,
+        "maximum_single_row_probability": 0.0027904093274706,
+        "effective_row_count": 28123.73171164439,
+        "total_weight": 10000000000000000
+      },
+      "checks": {
+        "critical_distribution_failures": [],
+        "target_rtp_matches": true,
+        "three_star_risk_classes": {},
+        "unverified": [
+          "gameplay_rules",
+          "book_event_integrity",
+          "simulation_diversity",
+          "book_size_and_event_count",
+          "viable_bet_template",
+          "frontend_playback",
+          "Stake_review"
+        ]
+      },
+      "publish_ready": false,
+      "exact_rtp": "481/500",
+      "tuning": {
+        "method": "whole-round-bucket-linear-program-with-exact-integer-repair",
+        "internal_shape_targets": {
+          "zero": 0.62,
+          "std": 25,
+          "feature": 0.0135
+        },
+        "buckets": 31,
+        "maxwin_probability_target": "1/1000000",
+        "events_modified": false
+      },
+      "weighted_feature_probability": 0.0134999999999999,
+      "weighted_average_spins": 1.1690728108025317,
+      "lookup_sha256": "9deb2b0192209cabfc5b565b15498881f66f8ac22c1c0a68d202d3c94152e947"
+    },
+    "boosted": {
+      "metrics": {
+        "mode": "boosted",
+        "cost_base_bet": 10.0,
+        "rtp": 0.962,
+        "expected_payout_base_bet": 9.62,
+        "variance_base_bet": 22499.999999979573,
+        "std_base_bet": 149.9999999999319,
+        "std_per_mode_cost": 14.99999999999319,
+        "nonzero_probability": 0.4500000000098115,
+        "prob5k_raw": 0.000279726280358,
+        "prob10k_raw": 1.0001e-06,
+        "cvar_absolute": 3393.157266529281,
+        "cvar_per_mode_cost": 339.3157266529281,
+        "etl40_cost_normalized": 0.3480283455441063,
+        "etl10k_cost_normalized": 0.002500177117671555,
+        "etl_sum": 0.3505285226617778,
+        "max_supported_payout_base_bet": 25000.0,
+        "max_win_probability": 1e-06,
+        "rows": 100000,
+        "positive_weight_rows": 100000,
+        "positive_weight_paying_rows": 51232,
+        "maximum_single_row_probability": 0.0006187495280523,
+        "effective_row_count": 75913.4296821333,
+        "total_weight": 10000000000000000
+      },
+      "checks": {
+        "critical_distribution_failures": [],
+        "target_rtp_matches": true,
+        "three_star_risk_classes": {},
+        "unverified": [
+          "gameplay_rules",
+          "book_event_integrity",
+          "simulation_diversity",
+          "book_size_and_event_count",
+          "viable_bet_template",
+          "frontend_playback",
+          "Stake_review"
+        ]
+      },
+      "publish_ready": false,
+      "exact_rtp": "481/500",
+      "tuning": {
+        "method": "whole-round-bucket-linear-program-with-exact-integer-repair",
+        "internal_shape_targets": {
+          "zero": 0.55,
+          "std": 15,
+          "feature": 0.0045
+        },
+        "buckets": 29,
+        "maxwin_probability_target": "1/1000000",
+        "events_modified": false
+      },
+      "weighted_feature_probability": 0.0045000000098114,
+      "weighted_average_spins": 1.0492246197544655,
+      "lookup_sha256": "820ba37ce5f2e3d1911a52737ceda346299de521483b63a67752a654df1e540a"
+    },
+    "bonus": {
+      "metrics": {
+        "mode": "bonus",
+        "cost_base_bet": 100.0,
+        "rtp": 0.962,
+        "expected_payout_base_bet": 96.2,
+        "variance_base_bet": 89999.99999999967,
+        "std_base_bet": 299.99999999999943,
+        "std_per_mode_cost": 2.9999999999999942,
+        "nonzero_probability": 0.9200000000005545,
+        "prob5k_raw": 0.0006746849035749,
+        "prob10k_raw": 4.55400237446e-05,
+        "cvar_absolute": 5755.823135178245,
+        "cvar_per_mode_cost": 57.558231351782446,
+        "etl40_cost_normalized": 0.04734431326932358,
+        "etl10k_cost_normalized": 0.005424704498671372,
+        "etl_sum": 0.052769017767994954,
+        "max_supported_payout_base_bet": 25000.0,
+        "max_win_probability": 1e-06,
+        "rows": 100000,
+        "positive_weight_rows": 100000,
+        "positive_weight_paying_rows": 94976,
+        "maximum_single_row_probability": 0.0013103235546117,
+        "effective_row_count": 51978.62858266804,
+        "total_weight": 10000000000000000
+      },
+      "checks": {
+        "critical_distribution_failures": [],
+        "target_rtp_matches": true,
+        "three_star_risk_classes": {},
+        "unverified": [
+          "gameplay_rules",
+          "book_event_integrity",
+          "simulation_diversity",
+          "book_size_and_event_count",
+          "viable_bet_template",
+          "frontend_playback",
+          "Stake_review"
+        ]
+      },
+      "publish_ready": false,
+      "exact_rtp": "481/500",
+      "tuning": {
+        "method": "whole-round-bucket-linear-program-with-exact-integer-repair",
+        "internal_shape_targets": {
+          "zero": 0.08,
+          "std": 3
+        },
+        "buckets": 12,
+        "maxwin_probability_target": "1/1000000",
+        "events_modified": false
+      },
+      "weighted_feature_probability": 1.0,
+      "weighted_average_spins": 10.316088084232197,
+      "lookup_sha256": "9ca59f69727e0036f0131a731ad91b08d19cee1c913b784709ca9cd2929ab36d"
+    },
+    "super": {
+      "metrics": {
+        "mode": "super",
+        "cost_base_bet": 300.0,
+        "rtp": 0.962,
+        "expected_payout_base_bet": 288.6,
+        "variance_base_bet": 1102500.000000009,
+        "std_base_bet": 1050.0000000000043,
+        "std_per_mode_cost": 3.500000000000014,
+        "nonzero_probability": 0.9399999999978299,
+        "prob5k_raw": 0.0109966935057682,
+        "prob10k_raw": 0.0017887005584068,
+        "cvar_absolute": 12809.488859092235,
+        "cvar_per_mode_cost": 42.69829619697411,
+        "etl40_cost_normalized": 0.030607724467948915,
+        "etl10k_cost_normalized": 0.0708530811774599,
+        "etl_sum": 0.10146080564540881,
+        "max_supported_payout_base_bet": 25000.0,
+        "max_win_probability": 1e-06,
+        "rows": 100000,
+        "positive_weight_rows": 100000,
+        "positive_weight_paying_rows": 94995,
+        "maximum_single_row_probability": 0.0001375154275698,
+        "effective_row_count": 65310.847462856735,
+        "total_weight": 10000000000000000
+      },
+      "checks": {
+        "critical_distribution_failures": [],
+        "target_rtp_matches": true,
+        "three_star_risk_classes": {},
+        "unverified": [
+          "gameplay_rules",
+          "book_event_integrity",
+          "simulation_diversity",
+          "book_size_and_event_count",
+          "viable_bet_template",
+          "frontend_playback",
+          "Stake_review"
+        ]
+      },
+      "publish_ready": false,
+      "exact_rtp": "481/500",
+      "tuning": {
+        "method": "whole-round-bucket-linear-program-with-exact-integer-repair",
+        "internal_shape_targets": {
+          "zero": 0.06,
+          "std": 3.5
+        },
+        "buckets": 10,
+        "maxwin_probability_target": "1/1000000",
+        "events_modified": false
+      },
+      "weighted_feature_probability": 1.0,
+      "weighted_average_spins": 12.334636718142137,
+      "lookup_sha256": "100a5acef961d129472659a7ee7a459adb62eb400570ce70239fc36f32cff6a4"
+    },
+    "hidden": {
+      "metrics": {
+        "mode": "hidden",
+        "cost_base_bet": 500.0,
+        "rtp": 0.962,
+        "expected_payout_base_bet": 481.0,
+        "variance_base_bet": 3062500.0000000363,
+        "std_base_bet": 1750.0000000000105,
+        "std_per_mode_cost": 3.500000000000021,
+        "nonzero_probability": 0.9500000000296728,
+        "prob5k_raw": 0.0246063674694454,
+        "prob10k_raw": 0.0099000000000026,
+        "cvar_absolute": 20502.36047815566,
+        "cvar_per_mode_cost": 41.00472095631132,
+        "etl40_cost_normalized": 0.021556338905004167,
+        "etl10k_cost_normalized": 0.285095641811507,
+        "etl_sum": 0.3066519807165111,
+        "max_supported_payout_base_bet": 25000.0,
+        "max_win_probability": 1e-06,
+        "rows": 100000,
+        "positive_weight_rows": 100000,
+        "positive_weight_paying_rows": 94996,
+        "maximum_single_row_probability": 2.58952905631e-05,
+        "effective_row_count": 54618.85074149567,
+        "total_weight": 10000000000000000
+      },
+      "checks": {
+        "critical_distribution_failures": [],
+        "target_rtp_matches": true,
+        "three_star_risk_classes": {},
+        "unverified": [
+          "gameplay_rules",
+          "book_event_integrity",
+          "simulation_diversity",
+          "book_size_and_event_count",
+          "viable_bet_template",
+          "frontend_playback",
+          "Stake_review"
+        ]
+      },
+      "publish_ready": false,
+      "exact_rtp": "481/500",
+      "tuning": {
+        "method": "whole-round-bucket-linear-program-with-exact-integer-repair",
+        "internal_shape_targets": {
+          "zero": 0.05,
+          "std": 3.5
+        },
+        "buckets": 10,
+        "maxwin_probability_target": "1/1000000",
+        "events_modified": false
+      },
+      "weighted_feature_probability": 1.0,
+      "weighted_average_spins": 12.256351897922457,
+      "lookup_sha256": "f51c0431a0ce6e247c21c18ee595f6b64671e68ff3c2c060551916d44c071c4c"
+    },
+    "maxzero": {
+      "metrics": {
+        "mode": "maxzero",
+        "cost_base_bet": 1000.0,
+        "rtp": 0.962,
+        "expected_payout_base_bet": 962.0,
+        "variance_base_bet": 23124556.0,
+        "std_base_bet": 4808.799850274494,
+        "std_per_mode_cost": 4.808799850274494,
+        "nonzero_probability": 0.03848,
+        "prob5k_raw": 0.03848,
+        "prob10k_raw": 0.03848,
+        "cvar_absolute": 25000.0,
+        "cvar_per_mode_cost": 25.0,
+        "etl40_cost_normalized": 0.0,
+        "etl10k_cost_normalized": 0.962,
+        "etl_sum": 0.962,
+        "max_supported_payout_base_bet": 25000.0,
+        "max_win_probability": 0.03848,
+        "rows": 100000,
+        "positive_weight_rows": 100000,
+        "positive_weight_paying_rows": 50000,
+        "maximum_single_row_probability": 1.92304e-05,
+        "effective_row_count": 53995.597497899646,
+        "total_weight": 10000000000000000
+      },
+      "checks": {
+        "critical_distribution_failures": [],
+        "target_rtp_matches": true,
+        "three_star_risk_classes": {
+          "tail_probability": {
+            "prob10k_raw": {
+              "value": 0.03848,
+              "limit": 0.01
+            }
+          },
+          "tail_liability": {
+            "etl10k_cost_normalized": {
+              "value": 0.962,
+              "limit": 0.8
+            }
+          }
+        },
+        "unverified": [
+          "gameplay_rules",
+          "book_event_integrity",
+          "simulation_diversity",
+          "book_size_and_event_count",
+          "viable_bet_template",
+          "frontend_playback",
+          "Stake_review"
+        ]
+      },
+      "publish_ready": false,
+      "exact_rtp": "481/500",
+      "tuning": {
+        "method": "exact-binary-weights"
+      },
+      "weighted_feature_probability": 0.0,
+      "weighted_average_spins": 0.0,
+      "lookup_sha256": "8113d585fa9e662624c5ace795313b58e97c2e002324008c9d1a753205ac565a"
+    }
+  },
+  "all_modes_complete": true,
+  "publish_ready": false
+}
