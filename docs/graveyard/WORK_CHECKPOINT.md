@@ -1,3 +1,17 @@
+# Current delivery checkpoint — 2026-09-10
+
+The full final-weight run has completed and been reproduced after a runtime restore. All seven modes passed 10,000,000 fixed-seed weighted round selections each: 70,000,000 total. Final-test.json records measured RTP, sample counts, frequency diagnostics, theoretical means, seed, code hash and input hashes. The exact lookup RTP remains 481/500 for every mode.
+
+All seven final assembled event files have independently replayed and passed their ID/payout/candidate joins. The current regression suite has 39 passing tests. Verification.json records all 700,000 event books and every exported file checksum.
+
+Latest source base: remote 3d6dcbf9b785f802084e3629e8f37710ea09b051. Current working directory: /workspace/scratch/b527f7704526/graveyard-math-final. Existing final data: ../graveyard-math-verified-v1. Full sampled counts: ../graveyard-final-trials. These reports are saved now before packaging.
+
+NEXT: Run the new package_upload.py against these exact final files and counts. It must produce exactly 15 root members (index plus seven book/lookup pairs), then verify every archived byte against the tested source. Preserve the upload ZIP and verification archive as durable deliverables, record hashes, and finish the README. The package has not yet been delivered at this checkpoint. No new model fitting or seed selection is needed.
+
+Six non-binary modes pass the implemented current distribution-risk profile. Maxzero still has its two documented non-critical risk classes; the pinned SDK warnings stay visible separately. Live frontend integration, ACP stats/templates and Stake approval are not claimed by this offline package.
+
+## Earlier checkpoint history
+
 # Graveyard math checkpoint
 
 ## Final 10-million-round validation — active 2026-09-09

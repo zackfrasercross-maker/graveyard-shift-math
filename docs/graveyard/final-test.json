@@ -1,0 +1,795 @@
+{
+  "requested_trials_per_mode": 10000000,
+  "completed_trials": 70000000,
+  "complete": true,
+  "all_sampling_tests_pass": true,
+  "modes": {
+    "ante": {
+      "mode": "ante",
+      "trials": 10000000,
+      "theoretical_rtp_exact": "481/500",
+      "observed_rtp_exact": "144333991/150000000",
+      "observed_rtp": 0.9622266066666667,
+      "theoretical_standard_deviation_per_cost": 24.99999999991528,
+      "observed_standard_deviation_per_cost": 24.962255782625107,
+      "normal_standard_error_of_rtp": 0.007905694150394157,
+      "normal_95_percent_half_width_approximate": 0.015494875807561528,
+      "bernstein_mean_bound": {
+        "family_alpha": 0.001,
+        "modes": 7,
+        "half_width": 0.038734345148307606,
+        "pass": true
+      },
+      "frequency_test_threshold": 5.9523809523809525e-06,
+      "frequency_tests": {
+        "break_even": {
+          "observed_count": 47489,
+          "expected_count": 47586.436221158,
+          "expected_probability_exact": "23793218110579/5000000000000000",
+          "observed_probability": 0.0047489,
+          "two_sided_binomial_pvalue": 0.6574567993101152,
+          "pass": true
+        },
+        "global_cap": {
+          "observed_count": 10,
+          "expected_count": 10.0,
+          "expected_probability_exact": "1/1000000",
+          "observed_probability": 1e-06,
+          "two_sided_binomial_pvalue": 1.0,
+          "pass": true
+        },
+        "profit_above_1000x_cost": {
+          "observed_count": 1145,
+          "expected_count": 1150.492921376,
+          "expected_probability_exact": "35952903793/312500000000000",
+          "observed_probability": 0.0001145,
+          "two_sided_binomial_pvalue": 0.8944412433581024,
+          "pass": true
+        },
+        "profit_band_up_to_1000x_cost": {
+          "observed_count": 5067,
+          "expected_count": 5081.623229897,
+          "expected_probability_exact": "5081623229897/10000000000000000",
+          "observed_probability": 0.0005067,
+          "two_sided_binomial_pvalue": 0.8442627608437177,
+          "pass": true
+        },
+        "profit_band_up_to_100x_cost": {
+          "observed_count": 26144,
+          "expected_count": 25963.550459887,
+          "expected_probability_exact": "25963550459887/10000000000000000",
+          "observed_probability": 0.0026144,
+          "two_sided_binomial_pvalue": 0.262007516019068,
+          "pass": true
+        },
+        "profit_band_up_to_25x_cost": {
+          "observed_count": 210087,
+          "expected_count": 209811.621263237,
+          "expected_probability_exact": "209811621263237/10000000000000000",
+          "observed_probability": 0.0210087,
+          "two_sided_binomial_pvalue": 0.543273024617611,
+          "pass": true
+        },
+        "profit_band_up_to_5x_cost": {
+          "observed_count": 920426,
+          "expected_count": 921175.190952023,
+          "expected_probability_exact": "921175190952023/10000000000000000",
+          "observed_probability": 0.0920426,
+          "two_sided_binomial_pvalue": 0.4130854969136967,
+          "pass": true
+        },
+        "return_below_cost": {
+          "observed_count": 2590365,
+          "expected_count": 2589221.085074856,
+          "expected_probability_exact": "323652635634357/1250000000000000",
+          "observed_probability": 0.2590365,
+          "two_sided_binomial_pvalue": 0.40888018818391936,
+          "pass": true
+        },
+        "zero": {
+          "observed_count": 6199267,
+          "expected_count": 6199999.999877566,
+          "expected_probability_exact": "3099999999938783/5000000000000000",
+          "observed_probability": 0.6199267,
+          "two_sided_binomial_pvalue": 0.6329725087955609,
+          "pass": true
+        },
+        "feature_round": {
+          "observed_count": 135067,
+          "expected_count": 134999.999999999,
+          "expected_probability_exact": "134999999999999/10000000000000000",
+          "observed_probability": 0.0135067,
+          "two_sided_binomial_pvalue": 0.8543315909013669,
+          "pass": true
+        },
+        "tower_reached_level_4": {
+          "observed_count": 112968,
+          "expected_count": 112931.066039589,
+          "expected_probability_exact": "112931066039589/10000000000000000",
+          "observed_probability": 0.0112968,
+          "two_sided_binomial_pvalue": 0.9118312192310373,
+          "pass": true
+        }
+      },
+      "failed_frequency_tests": [],
+      "distinct_book_ids_selected": 98403,
+      "selected_underlying_spins_including_free_spins": 11692634,
+      "all_sampling_tests_pass": true,
+      "note": "Finite observed RTP fluctuates; exact RTP belongs to immutable lookup weights. These trials do not create additional unique event books or constitute Stake RNG/platform certification.",
+      "identity": {
+        "seed": 2026090902,
+        "mode": "ante",
+        "mode_index": 1,
+        "lookup_sha256": "9deb2b0192209cabfc5b565b15498881f66f8ac22c1c0a68d202d3c94152e947",
+        "book_sha256": "3740d5d46d8aefe30e0671bf8d423882452d78e7b4c9eb5af5f240f9f75fe207",
+        "test_code_sha256": "65a5f5edd781ab09754278ffd65cea4621c1bacec77bb1dcee188bc63db18166",
+        "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+        "rng": "NumPy PCG64DXSM",
+        "numpy_version": "2.3.5"
+      },
+      "counts_sha256": "48eb36cfbcd0854e0e922c3028de0300926566a932d4569c24fb77fb0b0284cb",
+      "counts_path": "ante/f53a4fc0d03d2bd0/final-counts.npz"
+    },
+    "bonus": {
+      "mode": "bonus",
+      "trials": 10000000,
+      "theoretical_rtp_exact": "481/500",
+      "observed_rtp_exact": "9610649087/10000000000",
+      "observed_rtp": 0.9610649087,
+      "theoretical_standard_deviation_per_cost": 2.9999999999999942,
+      "observed_standard_deviation_per_cost": 2.99348863960603,
+      "normal_standard_error_of_rtp": 0.0009486832980505121,
+      "normal_95_percent_half_width_approximate": 0.0018593850969136814,
+      "bernstein_mean_bound": {
+        "family_alpha": 0.001,
+        "modes": 7,
+        "half_width": 0.004379423046329101,
+        "pass": true
+      },
+      "frequency_test_threshold": 5.9523809523809525e-06,
+      "frequency_tests": {
+        "break_even": {
+          "observed_count": 3995,
+          "expected_count": 4003.602289692,
+          "expected_probability_exact": "1000900572423/2500000000000000",
+          "observed_probability": 0.0003995,
+          "two_sided_binomial_pvalue": 0.8993680642910464,
+          "pass": true
+        },
+        "global_cap": {
+          "observed_count": 7,
+          "expected_count": 10.0,
+          "expected_probability_exact": "1/1000000",
+          "observed_probability": 7e-07,
+          "two_sided_binomial_pvalue": 0.42866394024419496,
+          "pass": true
+        },
+        "profit_band_up_to_1000x_cost": {
+          "observed_count": 453,
+          "expected_count": 445.400237446,
+          "expected_probability_exact": "222700118723/5000000000000000",
+          "observed_probability": 4.53e-05,
+          "two_sided_binomial_pvalue": 0.7046355581232403,
+          "pass": true
+        },
+        "profit_band_up_to_100x_cost": {
+          "observed_count": 32396,
+          "expected_count": 32497.919890536,
+          "expected_probability_exact": "4062239986317/1250000000000000",
+          "observed_probability": 0.0032396,
+          "two_sided_binomial_pvalue": 0.5746753696358552,
+          "pass": true
+        },
+        "profit_band_up_to_25x_cost": {
+          "observed_count": 463000,
+          "expected_count": 463827.777185772,
+          "expected_probability_exact": "115956944296443/2500000000000000",
+          "observed_probability": 0.0463,
+          "two_sided_binomial_pvalue": 0.2134129175430095,
+          "pass": true
+        },
+        "profit_band_up_to_5x_cost": {
+          "observed_count": 1420066,
+          "expected_count": 1420676.969848608,
+          "expected_probability_exact": "44396155307769/312500000000000",
+          "observed_probability": 0.1420066,
+          "two_sided_binomial_pvalue": 0.5802753133258521,
+          "pass": true
+        },
+        "return_below_cost": {
+          "observed_count": 7279504,
+          "expected_count": 7278538.330553491,
+          "expected_probability_exact": "7278538330553491/10000000000000000",
+          "observed_probability": 0.7279504,
+          "two_sided_binomial_pvalue": 0.49293221301727747,
+          "pass": true
+        },
+        "zero": {
+          "observed_count": 800579,
+          "expected_count": 799999.999994455,
+          "expected_probability_exact": "159999999998891/2000000000000000",
+          "observed_probability": 0.0800579,
+          "two_sided_binomial_pvalue": 0.49973904609453845,
+          "pass": true
+        },
+        "feature_round": {
+          "observed_count": 10000000,
+          "expected_count": 10000000.0,
+          "expected_probability_exact": "1",
+          "observed_probability": 1.0,
+          "two_sided_binomial_pvalue": 1.0,
+          "pass": true
+        },
+        "tower_reached_level_4": {
+          "observed_count": 3032300,
+          "expected_count": 3033028.621774259,
+          "expected_probability_exact": "3033028621774259/10000000000000000",
+          "observed_probability": 0.30323,
+          "two_sided_binomial_pvalue": 0.6165063735565075,
+          "pass": true
+        }
+      },
+      "failed_frequency_tests": [],
+      "distinct_book_ids_selected": 99007,
+      "selected_underlying_spins_including_free_spins": 103155664,
+      "all_sampling_tests_pass": true,
+      "note": "Finite observed RTP fluctuates; exact RTP belongs to immutable lookup weights. These trials do not create additional unique event books or constitute Stake RNG/platform certification.",
+      "identity": {
+        "seed": 2026090902,
+        "mode": "bonus",
+        "mode_index": 3,
+        "lookup_sha256": "9ca59f69727e0036f0131a731ad91b08d19cee1c913b784709ca9cd2929ab36d",
+        "book_sha256": "bddfa168af84b4c74fcf64f2b15e0b7356f6b6261f95e62e2f860793856fdddd",
+        "test_code_sha256": "65a5f5edd781ab09754278ffd65cea4621c1bacec77bb1dcee188bc63db18166",
+        "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+        "rng": "NumPy PCG64DXSM",
+        "numpy_version": "2.3.5"
+      },
+      "counts_sha256": "980852621a9f399454eeceba50acb94fde2216a4ad4f27ebc0efd503bf5f0e71",
+      "counts_path": "bonus/302119164cd5f0ca/final-counts.npz"
+    },
+    "boosted": {
+      "mode": "boosted",
+      "trials": 10000000,
+      "theoretical_rtp_exact": "481/500",
+      "observed_rtp_exact": "966488639/1000000000",
+      "observed_rtp": 0.966488639,
+      "theoretical_standard_deviation_per_cost": 14.99999999999319,
+      "observed_standard_deviation_per_cost": 15.032826156244006,
+      "normal_standard_error_of_rtp": 0.004743416490250416,
+      "normal_95_percent_half_width_approximate": 0.009296925484564204,
+      "bernstein_mean_bound": {
+        "family_alpha": 0.001,
+        "modes": 7,
+        "half_width": 0.022336494613614255,
+        "pass": true
+      },
+      "frequency_test_threshold": 5.9523809523809525e-06,
+      "frequency_tests": {
+        "break_even": {
+          "observed_count": 39683,
+          "expected_count": 39688.777921432,
+          "expected_probability_exact": "4961097240179/1250000000000000",
+          "observed_probability": 0.0039683,
+          "two_sided_binomial_pvalue": 0.9799370583062992,
+          "pass": true
+        },
+        "global_cap": {
+          "observed_count": 8,
+          "expected_count": 10.0,
+          "expected_probability_exact": "1/1000000",
+          "observed_probability": 8e-07,
+          "two_sided_binomial_pvalue": 0.6360433628845614,
+          "pass": true
+        },
+        "profit_above_1000x_cost": {
+          "observed_count": 0,
+          "expected_count": 0.001,
+          "expected_probability_exact": "1/10000000000",
+          "observed_probability": 0.0,
+          "two_sided_binomial_pvalue": 1.0,
+          "pass": true
+        },
+        "profit_band_up_to_1000x_cost": {
+          "observed_count": 5658,
+          "expected_count": 5564.807109868,
+          "expected_probability_exact": "1391201777467/2500000000000000",
+          "observed_probability": 0.0005658,
+          "two_sided_binomial_pvalue": 0.21237611036460427,
+          "pass": true
+        },
+        "profit_band_up_to_100x_cost": {
+          "observed_count": 17928,
+          "expected_count": 17747.088319957,
+          "expected_probability_exact": "17747088319957/10000000000000000",
+          "observed_probability": 0.0017928,
+          "two_sided_binomial_pvalue": 0.17386703752511865,
+          "pass": true
+        },
+        "profit_band_up_to_25x_cost": {
+          "observed_count": 232851,
+          "expected_count": 232530.573426502,
+          "expected_probability_exact": "116265286713251/5000000000000000",
+          "observed_probability": 0.0232851,
+          "two_sided_binomial_pvalue": 0.5012606997400776,
+          "pass": true
+        },
+        "profit_band_up_to_5x_cost": {
+          "observed_count": 1096005,
+          "expected_count": 1095391.064436869,
+          "expected_probability_exact": "1095391064436869/10000000000000000",
+          "observed_probability": 0.1096005,
+          "two_sided_binomial_pvalue": 0.5341433959026775,
+          "pass": true
+        },
+        "return_below_cost": {
+          "observed_count": 3110768,
+          "expected_count": 3109067.687883487,
+          "expected_probability_exact": "3109067687883487/10000000000000000",
+          "observed_probability": 0.3110768,
+          "two_sided_binomial_pvalue": 0.2454651132125512,
+          "pass": true
+        },
+        "zero": {
+          "observed_count": 5497099,
+          "expected_count": 5499999.999901885,
+          "expected_probability_exact": "1099999999980377/2000000000000000",
+          "observed_probability": 0.5497099,
+          "two_sided_binomial_pvalue": 0.06522995499514084,
+          "pass": true
+        },
+        "feature_round": {
+          "observed_count": 44808,
+          "expected_count": 45000.000098114,
+          "expected_probability_exact": "22500000049057/5000000000000000",
+          "observed_probability": 0.0044808,
+          "two_sided_binomial_pvalue": 0.3655828666941168,
+          "pass": true
+        },
+        "tower_reached_level_4": {
+          "observed_count": 227795,
+          "expected_count": 227429.068670924,
+          "expected_probability_exact": "56857267167731/2500000000000000",
+          "observed_probability": 0.0227795,
+          "two_sided_binomial_pvalue": 0.43754631160547763,
+          "pass": true
+        }
+      },
+      "failed_frequency_tests": [],
+      "distinct_book_ids_selected": 97325,
+      "selected_underlying_spins_including_free_spins": 10490387,
+      "all_sampling_tests_pass": true,
+      "note": "Finite observed RTP fluctuates; exact RTP belongs to immutable lookup weights. These trials do not create additional unique event books or constitute Stake RNG/platform certification.",
+      "identity": {
+        "seed": 2026090902,
+        "mode": "boosted",
+        "mode_index": 2,
+        "lookup_sha256": "820ba37ce5f2e3d1911a52737ceda346299de521483b63a67752a654df1e540a",
+        "book_sha256": "3146d9c4c9f96e3126b090f9cdd63a2e3453dd0f2abe1fd9a93e5ac19dd3309e",
+        "test_code_sha256": "65a5f5edd781ab09754278ffd65cea4621c1bacec77bb1dcee188bc63db18166",
+        "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+        "rng": "NumPy PCG64DXSM",
+        "numpy_version": "2.3.5"
+      },
+      "counts_sha256": "41de5d36cbd9ab64613848990488eee4e62e4501966e2347fa8f206c6e262fd7",
+      "counts_path": "boosted/ae9481dcc3f5478f/final-counts.npz"
+    },
+    "base": {
+      "mode": "base",
+      "trials": 10000000,
+      "theoretical_rtp_exact": "481/500",
+      "observed_rtp_exact": "95706847/100000000",
+      "observed_rtp": 0.95706847,
+      "theoretical_standard_deviation_per_cost": 34.9999999993438,
+      "observed_standard_deviation_per_cost": 33.09705709274968,
+      "normal_standard_error_of_rtp": 0.011067971810381818,
+      "normal_95_percent_half_width_approximate": 0.021692826130252946,
+      "bernstein_mean_bound": {
+        "family_alpha": 0.001,
+        "modes": 7,
+        "half_width": 0.05934282013438176,
+        "pass": true
+      },
+      "frequency_test_threshold": 5.9523809523809525e-06,
+      "frequency_tests": {
+        "break_even": {
+          "observed_count": 125265,
+          "expected_count": 124956.360279457,
+          "expected_probability_exact": "124956360279457/10000000000000000",
+          "observed_probability": 0.0125265,
+          "two_sided_binomial_pvalue": 0.379049213604456,
+          "pass": true
+        },
+        "global_cap": {
+          "observed_count": 8,
+          "expected_count": 10.0,
+          "expected_probability_exact": "1/1000000",
+          "observed_probability": 8e-07,
+          "two_sided_binomial_pvalue": 0.6360433628845614,
+          "pass": true
+        },
+        "profit_above_1000x_cost": {
+          "observed_count": 1567,
+          "expected_count": 1559.770975314,
+          "expected_probability_exact": "779885487657/5000000000000000",
+          "observed_probability": 0.0001567,
+          "two_sided_binomial_pvalue": 0.8493695397328648,
+          "pass": true
+        },
+        "profit_band_up_to_1000x_cost": {
+          "observed_count": 5414,
+          "expected_count": 5364.33300492,
+          "expected_probability_exact": "134108325123/250000000000000",
+          "observed_probability": 0.0005414,
+          "two_sided_binomial_pvalue": 0.49469790302090877,
+          "pass": true
+        },
+        "profit_band_up_to_100x_cost": {
+          "observed_count": 15440,
+          "expected_count": 15305.943325238,
+          "expected_probability_exact": "7652971662619/5000000000000000",
+          "observed_probability": 0.001544,
+          "two_sided_binomial_pvalue": 0.2783862452915481,
+          "pass": true
+        },
+        "profit_band_up_to_25x_cost": {
+          "observed_count": 154689,
+          "expected_count": 154537.344034308,
+          "expected_probability_exact": "38634336008577/2500000000000000",
+          "observed_probability": 0.0154689,
+          "two_sided_binomial_pvalue": 0.6967727227039031,
+          "pass": true
+        },
+        "profit_band_up_to_5x_cost": {
+          "observed_count": 726102,
+          "expected_count": 726135.45720683,
+          "expected_probability_exact": "72613545720683/1000000000000000",
+          "observed_probability": 0.0726102,
+          "two_sided_binomial_pvalue": 0.9679227056449122,
+          "pass": true
+        },
+        "return_below_cost": {
+          "observed_count": 1970775,
+          "expected_count": 1972130.791329693,
+          "expected_probability_exact": "1972130791329693/10000000000000000",
+          "observed_probability": 0.1970775,
+          "two_sided_binomial_pvalue": 0.28135196740971213,
+          "pass": true
+        },
+        "zero": {
+          "observed_count": 7000740,
+          "expected_count": 6999999.99984424,
+          "expected_probability_exact": "87499999998053/125000000000000",
+          "observed_probability": 0.700074,
+          "two_sided_binomial_pvalue": 0.6098388669728132,
+          "pass": true
+        },
+        "feature_round": {
+          "observed_count": 45055,
+          "expected_count": 44999.999999999,
+          "expected_probability_exact": "44999999999999/10000000000000000",
+          "observed_probability": 0.0045055,
+          "two_sided_binomial_pvalue": 0.7949730758559137,
+          "pass": true
+        },
+        "tower_reached_level_4": {
+          "observed_count": 37334,
+          "expected_count": 37489.148664289,
+          "expected_probability_exact": "37489148664289/10000000000000000",
+          "observed_probability": 0.0037334,
+          "two_sided_binomial_pvalue": 0.4240287822792685,
+          "pass": true
+        }
+      },
+      "failed_frequency_tests": [],
+      "distinct_book_ids_selected": 94954,
+      "selected_underlying_spins_including_free_spins": 10466003,
+      "all_sampling_tests_pass": true,
+      "note": "Finite observed RTP fluctuates; exact RTP belongs to immutable lookup weights. These trials do not create additional unique event books or constitute Stake RNG/platform certification.",
+      "identity": {
+        "seed": 2026090902,
+        "mode": "base",
+        "mode_index": 0,
+        "lookup_sha256": "ee1f65a9a6739273d653a70f203c8fcf3ac458e6de0bbf275e9a1acb2b01fe3e",
+        "book_sha256": "e053ba4c6d6be1d84452c7d99dc4b9c33dbe52ca65d3bfc1d56733336ccfee6a",
+        "test_code_sha256": "65a5f5edd781ab09754278ffd65cea4621c1bacec77bb1dcee188bc63db18166",
+        "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+        "rng": "NumPy PCG64DXSM",
+        "numpy_version": "2.3.5"
+      },
+      "counts_sha256": "fd9a6c9a1ca12db190c4b5139db5546a89d8bdff5792fcd6ff316e1a81242e77",
+      "counts_path": "base/fac42173a34227ae/final-counts.npz"
+    },
+    "super": {
+      "mode": "super",
+      "trials": 10000000,
+      "theoretical_rtp_exact": "481/500",
+      "observed_rtp_exact": "1803234547/1875000000",
+      "observed_rtp": 0.9617250917333333,
+      "theoretical_standard_deviation_per_cost": 3.500000000000014,
+      "observed_standard_deviation_per_cost": 3.500809373353479,
+      "normal_standard_error_of_rtp": 0.0011067971810589372,
+      "normal_95_percent_half_width_approximate": 0.002169282613065974,
+      "bernstein_mean_bound": {
+        "family_alpha": 0.001,
+        "modes": 7,
+        "half_width": 0.005037307533465079,
+        "pass": true
+      },
+      "frequency_test_threshold": 5.9523809523809525e-06,
+      "frequency_tests": {
+        "break_even": {
+          "observed_count": 657,
+          "expected_count": 638.91936841,
+          "expected_probability_exact": "63891936841/1000000000000000",
+          "observed_probability": 6.57e-05,
+          "two_sided_binomial_pvalue": 0.47631777801688246,
+          "pass": true
+        },
+        "global_cap": {
+          "observed_count": 7,
+          "expected_count": 10.0,
+          "expected_probability_exact": "1/1000000",
+          "observed_probability": 7e-07,
+          "two_sided_binomial_pvalue": 0.42866394024419496,
+          "pass": true
+        },
+        "profit_band_up_to_100x_cost": {
+          "observed_count": 89325,
+          "expected_count": 89385.027920336,
+          "expected_probability_exact": "5586564245021/625000000000000",
+          "observed_probability": 0.0089325,
+          "two_sided_binomial_pvalue": 0.8415511002608047,
+          "pass": true
+        },
+        "profit_band_up_to_25x_cost": {
+          "observed_count": 473700,
+          "expected_count": 474280.402012382,
+          "expected_probability_exact": "237140201006191/5000000000000000",
+          "observed_probability": 0.04737,
+          "two_sided_binomial_pvalue": 0.3881913376354473,
+          "pass": true
+        },
+        "profit_band_up_to_5x_cost": {
+          "observed_count": 156301,
+          "expected_count": 156269.846942037,
+          "expected_probability_exact": "156269846942037/10000000000000000",
+          "observed_probability": 0.0156301,
+          "two_sided_binomial_pvalue": 0.9359872465513647,
+          "pass": true
+        },
+        "return_below_cost": {
+          "observed_count": 8679044,
+          "expected_count": 8679415.803735133,
+          "expected_probability_exact": "4339707901867567/5000000000000000",
+          "observed_probability": 0.8679044,
+          "two_sided_binomial_pvalue": 0.7282398618067019,
+          "pass": true
+        },
+        "zero": {
+          "observed_count": 600966,
+          "expected_count": 600000.000021701,
+          "expected_probability_exact": "600000000021701/10000000000000000",
+          "observed_probability": 0.0600966,
+          "two_sided_binomial_pvalue": 0.19834320244008943,
+          "pass": true
+        },
+        "feature_round": {
+          "observed_count": 10000000,
+          "expected_count": 10000000.0,
+          "expected_probability_exact": "1",
+          "observed_probability": 1.0,
+          "two_sided_binomial_pvalue": 1.0,
+          "pass": true
+        },
+        "tower_reached_level_4": {
+          "observed_count": 9277686,
+          "expected_count": 9278945.873352295,
+          "expected_probability_exact": "4639472936676147/5000000000000000",
+          "observed_probability": 0.9277686,
+          "two_sided_binomial_pvalue": 0.1236085393857656,
+          "pass": true
+        }
+      },
+      "failed_frequency_tests": [],
+      "distinct_book_ids_selected": 86860,
+      "selected_underlying_spins_including_free_spins": 123346953,
+      "all_sampling_tests_pass": true,
+      "note": "Finite observed RTP fluctuates; exact RTP belongs to immutable lookup weights. These trials do not create additional unique event books or constitute Stake RNG/platform certification.",
+      "identity": {
+        "seed": 2026090902,
+        "mode": "super",
+        "mode_index": 4,
+        "lookup_sha256": "100a5acef961d129472659a7ee7a459adb62eb400570ce70239fc36f32cff6a4",
+        "book_sha256": "7c2c5358fb6b5dac45288c4a4ebbc763e844119d339aafc19a895dc526eb70ba",
+        "test_code_sha256": "65a5f5edd781ab09754278ffd65cea4621c1bacec77bb1dcee188bc63db18166",
+        "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+        "rng": "NumPy PCG64DXSM",
+        "numpy_version": "2.3.5"
+      },
+      "counts_sha256": "248f19ccdc8429768620e8782e02b46f03c9b0368823c2915e948686180ab70f",
+      "counts_path": "super/fdb2d30898ae09b3/final-counts.npz"
+    },
+    "maxzero": {
+      "mode": "maxzero",
+      "trials": 10000000,
+      "theoretical_rtp_exact": "481/500",
+      "observed_rtp_exact": "384719/400000",
+      "observed_rtp": 0.9617975,
+      "theoretical_standard_deviation_per_cost": 4.808799850274494,
+      "observed_standard_deviation_per_cost": 4.808313952831465,
+      "normal_standard_error_of_rtp": 0.001520676033874408,
+      "normal_95_percent_half_width_approximate": 0.0029804702585470508,
+      "bernstein_mean_bound": {
+        "family_alpha": 0.001,
+        "modes": 7,
+        "half_width": 0.006890319225994141,
+        "pass": true
+      },
+      "frequency_test_threshold": 5.9523809523809525e-06,
+      "frequency_tests": {
+        "global_cap": {
+          "observed_count": 384719,
+          "expected_count": 384800.0,
+          "expected_probability_exact": "481/12500",
+          "observed_probability": 0.0384719,
+          "two_sided_binomial_pvalue": 0.8947134387164286,
+          "pass": true
+        },
+        "zero": {
+          "observed_count": 9615281,
+          "expected_count": 9615200.0,
+          "expected_probability_exact": "12019/12500",
+          "observed_probability": 0.9615281,
+          "two_sided_binomial_pvalue": 0.8947134387164379,
+          "pass": true
+        },
+        "feature_round": {
+          "observed_count": 0,
+          "expected_count": 0.0,
+          "expected_probability_exact": "0",
+          "observed_probability": 0.0,
+          "two_sided_binomial_pvalue": 1.0,
+          "pass": true
+        },
+        "tower_reached_level_4": {
+          "observed_count": 0,
+          "expected_count": 0.0,
+          "expected_probability_exact": "0",
+          "observed_probability": 0.0,
+          "two_sided_binomial_pvalue": 1.0,
+          "pass": true
+        }
+      },
+      "failed_frequency_tests": [],
+      "distinct_book_ids_selected": 99967,
+      "selected_underlying_spins_including_free_spins": 0,
+      "all_sampling_tests_pass": true,
+      "note": "Finite observed RTP fluctuates; exact RTP belongs to immutable lookup weights. These trials do not create additional unique event books or constitute Stake RNG/platform certification.",
+      "identity": {
+        "seed": 2026090902,
+        "mode": "maxzero",
+        "mode_index": 6,
+        "lookup_sha256": "8113d585fa9e662624c5ace795313b58e97c2e002324008c9d1a753205ac565a",
+        "book_sha256": "ed409fe872bd04c96d2010f0f711f4a9151c2d1e551e40b37a87330b54ccdb5d",
+        "test_code_sha256": "65a5f5edd781ab09754278ffd65cea4621c1bacec77bb1dcee188bc63db18166",
+        "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+        "rng": "NumPy PCG64DXSM",
+        "numpy_version": "2.3.5"
+      },
+      "counts_sha256": "028cd61fd33adacd648c0e034984ab7987a362346a78ac49720eb6c071d30091",
+      "counts_path": "maxzero/3500c0f1d65a7cee/final-counts.npz"
+    },
+    "hidden": {
+      "mode": "hidden",
+      "trials": 10000000,
+      "theoretical_rtp_exact": "481/500",
+      "observed_rtp_exact": "48112272557/50000000000",
+      "observed_rtp": 0.96224545114,
+      "theoretical_standard_deviation_per_cost": 3.500000000000021,
+      "observed_standard_deviation_per_cost": 3.5010548410796023,
+      "normal_standard_error_of_rtp": 0.0011067971810589394,
+      "normal_95_percent_half_width_approximate": 0.0021692826130659784,
+      "bernstein_mean_bound": {
+        "family_alpha": 0.001,
+        "modes": 7,
+        "half_width": 0.005025878110602002,
+        "pass": true
+      },
+      "frequency_test_threshold": 5.9523809523809525e-06,
+      "frequency_tests": {
+        "break_even": {
+          "observed_count": 180,
+          "expected_count": 171.396747926,
+          "expected_probability_exact": "85698373963/5000000000000000",
+          "observed_probability": 1.8e-05,
+          "two_sided_binomial_pvalue": 0.49185374501397605,
+          "pass": true
+        },
+        "global_cap": {
+          "observed_count": 11,
+          "expected_count": 10.0,
+          "expected_probability_exact": "1/1000000",
+          "observed_probability": 1.1e-06,
+          "two_sided_binomial_pvalue": 0.7497798158629225,
+          "pass": true
+        },
+        "profit_band_up_to_100x_cost": {
+          "observed_count": 83420,
+          "expected_count": 83388.986799331,
+          "expected_probability_exact": "83388986799331/10000000000000000",
+          "observed_probability": 0.008342,
+          "two_sided_binomial_pvalue": 0.912773876912091,
+          "pass": true
+        },
+        "profit_band_up_to_25x_cost": {
+          "observed_count": 493506,
+          "expected_count": 493559.181048327,
+          "expected_probability_exact": "493559181048327/10000000000000000",
+          "observed_probability": 0.0493506,
+          "two_sided_binomial_pvalue": 0.9389063934171984,
+          "pass": true
+        },
+        "profit_band_up_to_5x_cost": {
+          "observed_count": 0,
+          "expected_count": 0.002,
+          "expected_probability_exact": "1/5000000000",
+          "observed_probability": 0.0,
+          "two_sided_binomial_pvalue": 1.0,
+          "pass": true
+        },
+        "return_below_cost": {
+          "observed_count": 8923950,
+          "expected_count": 8922870.433701145,
+          "expected_probability_exact": "1115358804212643/1250000000000000",
+          "observed_probability": 0.892395,
+          "two_sided_binomial_pvalue": 0.2710645052322235,
+          "pass": true
+        },
+        "zero": {
+          "observed_count": 498933,
+          "expected_count": 499999.999703272,
+          "expected_probability_exact": "62499999962909/1250000000000000",
+          "observed_probability": 0.0498933,
+          "two_sided_binomial_pvalue": 0.12175690399857214,
+          "pass": true
+        },
+        "feature_round": {
+          "observed_count": 10000000,
+          "expected_count": 10000000.0,
+          "expected_probability_exact": "1",
+          "observed_probability": 1.0,
+          "two_sided_binomial_pvalue": 1.0,
+          "pass": true
+        },
+        "tower_reached_level_4": {
+          "observed_count": 9303593,
+          "expected_count": 9302071.034800641,
+          "expected_probability_exact": "4651035517400321/5000000000000000",
+          "observed_probability": 0.9303593,
+          "two_sided_binomial_pvalue": 0.05889925197286222,
+          "pass": true
+        }
+      },
+      "failed_frequency_tests": [],
+      "distinct_book_ids_selected": 87368,
+      "selected_underlying_spins_including_free_spins": 122568915,
+      "all_sampling_tests_pass": true,
+      "note": "Finite observed RTP fluctuates; exact RTP belongs to immutable lookup weights. These trials do not create additional unique event books or constitute Stake RNG/platform certification.",
+      "identity": {
+        "seed": 2026090902,
+        "mode": "hidden",
+        "mode_index": 5,
+        "lookup_sha256": "f51c0431a0ce6e247c21c18ee595f6b64671e68ff3c2c060551916d44c071c4c",
+        "book_sha256": "7e743c71b5587a64eff6c03f5056631d7f15bd5cfa6c915549afd35d57f572e2",
+        "test_code_sha256": "65a5f5edd781ab09754278ffd65cea4621c1bacec77bb1dcee188bc63db18166",
+        "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+        "rng": "NumPy PCG64DXSM",
+        "numpy_version": "2.3.5"
+      },
+      "counts_sha256": "9dc27023b02ea3a35cfe75442474fc071e051f6361fe8529a98aa08b9c80e834",
+      "counts_path": "hidden/d51a5bc115bdba45/final-counts.npz"
+    }
+  },
+  "publish_approval": false
+}
