@@ -1,0 +1,40 @@
+{
+  "archive": "Graveyard_Shift_Stake_Math_Upload_v1.zip",
+  "archive_sha256": "ba77c00e001c0ee6179bf4c35a9669b75ba1b28fdaf71fb2a70795536ed68a2e",
+  "archive_bytes": 434499693,
+  "members": {
+    "index.json": "e8e716be15fb1616f175e408dfd47b4721d096d395398d07c687b3a4dc8c5dcc",
+    "books_base.jsonl.zst": "e053ba4c6d6be1d84452c7d99dc4b9c33dbe52ca65d3bfc1d56733336ccfee6a",
+    "lookUpTable_base_0.csv": "ee1f65a9a6739273d653a70f203c8fcf3ac458e6de0bbf275e9a1acb2b01fe3e",
+    "books_ante.jsonl.zst": "3740d5d46d8aefe30e0671bf8d423882452d78e7b4c9eb5af5f240f9f75fe207",
+    "lookUpTable_ante_0.csv": "9deb2b0192209cabfc5b565b15498881f66f8ac22c1c0a68d202d3c94152e947",
+    "books_boosted.jsonl.zst": "3146d9c4c9f96e3126b090f9cdd63a2e3453dd0f2abe1fd9a93e5ac19dd3309e",
+    "lookUpTable_boosted_0.csv": "820ba37ce5f2e3d1911a52737ceda346299de521483b63a67752a654df1e540a",
+    "books_bonus.jsonl.zst": "bddfa168af84b4c74fcf64f2b15e0b7356f6b6261f95e62e2f860793856fdddd",
+    "lookUpTable_bonus_0.csv": "9ca59f69727e0036f0131a731ad91b08d19cee1c913b784709ca9cd2929ab36d",
+    "books_super.jsonl.zst": "7c2c5358fb6b5dac45288c4a4ebbc763e844119d339aafc19a895dc526eb70ba",
+    "lookUpTable_super_0.csv": "100a5acef961d129472659a7ee7a459adb62eb400570ce70239fc36f32cff6a4",
+    "books_hidden.jsonl.zst": "7e743c71b5587a64eff6c03f5056631d7f15bd5cfa6c915549afd35d57f572e2",
+    "lookUpTable_hidden_0.csv": "f51c0431a0ce6e247c21c18ee595f6b64671e68ff3c2c060551916d44c071c4c",
+    "books_maxzero.jsonl.zst": "ed409fe872bd04c96d2010f0f711f4a9151c2d1e551e40b37a87330b54ccdb5d",
+    "lookUpTable_maxzero_0.csv": "8113d585fa9e662624c5ace795313b58e97c2e002324008c9d1a753205ac565a"
+  },
+  "math_upload_schema_verified": true,
+  "offline_math_validation_passed": true,
+  "tested_round_selections": 70000000,
+  "model_hash": "d476a9c7741ee1245c3f4591b6295a48ee87659dcad0f30f999859c7ea5b733d",
+  "stake_approval": false,
+  "frontend_live_integration_verified": false,
+  "risk_classes": {
+    "base": [],
+    "ante": [],
+    "boosted": [],
+    "bonus": [],
+    "super": [],
+    "hidden": [],
+    "maxzero": [
+      "tail_probability",
+      "tail_liability"
+    ]
+  }
+}

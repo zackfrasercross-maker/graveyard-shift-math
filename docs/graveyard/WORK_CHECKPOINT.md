@@ -1,3 +1,15 @@
+# Final package checkpoint — 2026-09-10
+
+The complete 70-million-round result is now saved remotely at 2357990d8df43335f1d3cd762f9d2d79d73d2fa3. All seven event files passed final independent replay. The same sampling results were reproduced after the runtime restored older local data, using the original seed and exact source.
+
+package_upload.py ran successfully on the final export and saved counts. It verified the index and all seven pairs, exact theoretical RTP, per-mode 10-million test counts, uint64 sampled counts, observed RTP reconstruction, unchanged file/code hashes, and every ZIP member CRC/SHA256. The archive is complete; see DELIVERY.md and upload-manifest.json. No rerun or further model tuning is needed for this tested version.
+
+Both deliverables were saved successfully and their local metadata was applied. The math ZIP and validation ZIP are available from the final ChatGPT response. Their exact filenames, sizes and SHA256 hashes are in DELIVERY.md. No simulation, optimization or packaging rerun is needed for this delivered version. Keep the two files together for traceability.
+
+This is a completed offline math submission package. Frontend authoritative playback and physical tower alignment, ACP parity/templates and Stake approval remain separate tasks. Preserve the binary risk flags and the SDK comparison. Do not claim a three-star award.
+
+## Earlier history
+
 # Current delivery checkpoint — 2026-09-10
 
 The full final-weight run has completed and been reproduced after a runtime restore. All seven modes passed 10,000,000 fixed-seed weighted round selections each: 70,000,000 total. Final-test.json records measured RTP, sample counts, frequency diagnostics, theoretical means, seed, code hash and input hashes. The exact lookup RTP remains 481/500 for every mode.

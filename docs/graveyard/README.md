@@ -13,6 +13,8 @@ Use Python 3.12 and requirements-graveyard.txt. Run from the repository root:
     python -m games.graveyard_shift.simulate --output /tmp/graveyard-runs --count 100000 --workers 4
     python -m games.graveyard_shift.optimize /tmp/graveyard-runs/d476a9c7741ee124 --output /tmp/graveyard-weights
     python -m games.graveyard_shift.export /tmp/graveyard-runs/d476a9c7741ee124 /tmp/graveyard-weights --output /tmp/graveyard-verified --workers 4
+    python -m games.graveyard_shift.final_trials /tmp/graveyard-verified /tmp/graveyard-runs/d476a9c7741ee124 --output /tmp/graveyard-trials --trials 10000000 --batch 1000000 --workers 4
+    python -m games.graveyard_shift.package_upload /tmp/graveyard-verified /tmp/graveyard-trials --output /tmp/Graveyard_Shift_Stake_Math_Upload_v1.zip
 
 Use the actual fingerprint directory printed by generation if later source changes alter it. Resume the same commands after interruption. Completed batches and exports are reused only when identities and checksums agree. Optimizer results are saved atomically after each mode.
 
@@ -22,7 +24,7 @@ If restored data is damaged, run the repair module with the candidate directory.
 
 The exporter produces index.json, seven compressed event books, seven headerless id/weight/payoutMultiplier lookup tables, per-mode integrity/risk reports, frontend contract/rules, replay fixtures and checksums. Final files are independently replayed and joined to lookups: IDs, ways, awards, survivor order, tower transitions, free-spin counts and round caps must agree.
 
-weighting-audit.json is the saved seven-mode numerical result. Final assembled-file verification was interrupted by an execution-environment disconnect: six modes had completed, while Hidden Bonus final replay and the combined export still need confirmation. No completed downloadable data archive is being claimed. Source and reproduction commands are saved on this branch.
+All seven final assembled event files passed independent replay and byte checks. Final-test.json records 10,000,000 fixed-seed weighted selections per mode (70,000,000 total), with all predeclared sampling diagnostics passing. The results were reproduced after runtime restoration. The upload ZIP has exactly 15 root files and every archived member was compared by SHA256 to the tested source. See DELIVERY.md and upload-manifest.json for archive identity and the remaining platform/frontend integration status.
 
 Event amounts are hundredths of a base bet, not wallet currency units. Neither buy cost nor tower multiplies the shared 25,000× round cap. maxzero-feasibility.json is an earlier analytical checkpoint, not the final seven-mode result.
 
